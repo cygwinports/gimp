@@ -1,0 +1,20 @@
+category: Graphics Gnome
+requires: cygwin glib2 gtk2-x11 libX11_6 libXmu6 libart_lgpl2 libgtkhtml2 aalib bzip2 gzip lcms libXpm4 libexif libjpeg62 libmng libpng12 librsvg2 libtiff5 libwmf
+sdesc: "GNU Image Manipulation Program version 2"
+ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and
+manipulate images. It can load and save a variety of image formats and
+can be used to convert between formats.
+
+GIMP can also be used as a paint program. It features a set of drawing
+and  painting  tools such as airbrush, clone, pencil, and paint brush.
+Painting and drawing tools can be applied to an image with  a  variety
+of  paint modes.  It also offers an extensive array of selection tools
+like rectangle, ellipse,  fuzzy  select,  bezier  select,  intelligent
+scissors, and select by color.
+
+GIMP  offers  a  variety  of  plugins  that perform a variety of image
+manipulations.  Examples include bumpmap, edge detect, gaussian  blur,
+and many others.
+
+In  addition,  GIMP  has  several  scripting extension which allow for
+advanced non-interactive processing and creation of images."
