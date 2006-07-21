@@ -19,18 +19,18 @@ In  addition,  GIMP  has  several  scripting extension which allow for
 advanced non-interactive processing and creation of images.
 
 Runtime requirements:
-  cygwin-1.5.19-4
-  glib2-2.8.6-1
-  gtk2-x11-2.8.13-1
-  libX11_6-1.0.0-2
-  libXmu6-1.0.0-1
+  cygwin-1.5.20-1
+  glib2-2.10.3-1
+  gtk2-x11-2.8.19-1
+  libX11_6-1.0.2-1
+  libXmu6-1.0.2-1
   libart_lgpl2-2.3.17-1
   libgtkhtml2-2.6.3-1
 
 The python module and plugins require:
 
   pygtk2-2.8.6-1
-  python-2.4.1-1
+  python-2.4.3-1
 
 Other plugins require some of the following:
 
@@ -41,25 +41,25 @@ Other plugins require some of the following:
   libjpeg62-6b-11
   libmng-1.0.9-1
   libpng12-1.2.8-2
-  librsvg2-2.12.7-2
+  librsvg2-2.14.4-1
   libtiff5-3.7.3-1
   libwmf-0.2.8.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
+  cygwin-1.5.20-1
+  autoconf2.5-2.59-2
   automake1.9-1.9.6-1
   binutils-20050610-1
-  cygport-0.1.92-1
+  cygport-0.2.3-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   gtk-doc-1.5-1
-  intltool-0.34.2-1
+  intltool-0.35.0-1
   libtool1.5-1.5.22-1
   make-3.80-1
   pkg-config-0.20-1
-  sed-4.1.4-1
+  sed-4.1.5-1
 
 Canonical homepage:
   http://www.gimp.org/
@@ -70,18 +70,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-2.2.11-X-src.tar.bz2
+  unpack gimp2-2.2.12-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-2.2.11-X.cygport all
+  cygport ./gimp2-2.2.12-X.cygport all
 
 This will create:
-  /usr/src/gimp2-2.2.11-X-src.tar.bz2
-  /usr/src/gimp2-2.2.11-X.tar.bz2
-  /usr/src/gimp2-devel-2.2.11-X.tar.bz2
-  /usr/src/gimp2-doc-2.2.11-X.tar.bz2
-  /usr/src/gimp2-python-2.2.11-X.tar.bz2
+  /usr/src/gimp2-2.2.12-X-src.tar.bz2
+  /usr/src/gimp2-2.2.12-X.tar.bz2
+  /usr/src/gimp2-devel-2.2.12-X.tar.bz2
+  /usr/src/gimp2-doc-2.2.12-X.tar.bz2
+  /usr/src/gimp2-python-2.2.12-X.tar.bz2
 
 -------------------------------------------
 
@@ -285,17 +285,17 @@ Files included in the binary package:
   /usr/lib/gimp/2.0/plug-ins/xpm.exe
   /usr/lib/gimp/2.0/plug-ins/xwd.exe
   /usr/lib/gimp/2.0/plug-ins/zealouscrop.exe
-  /usr/share/doc/Cygwin/gimp2-2.2.11.README
-  /usr/share/doc/gimp2-2.2.11/AUTHORS
-  /usr/share/doc/gimp2-2.2.11/ChangeLog
-  /usr/share/doc/gimp2-2.2.11/COPYING
-  /usr/share/doc/gimp2-2.2.11/HACKING
-  /usr/share/doc/gimp2-2.2.11/INSTALL
-  /usr/share/doc/gimp2-2.2.11/LICENSE
-  /usr/share/doc/gimp2-2.2.11/NEWS
-  /usr/share/doc/gimp2-2.2.11/README
-  /usr/share/doc/gimp2-2.2.11/README.i18n
-  /usr/share/doc/gimp2-2.2.11/README.win32
+  /usr/share/doc/Cygwin/gimp2-2.2.12.README
+  /usr/share/doc/gimp2-2.2.12/AUTHORS
+  /usr/share/doc/gimp2-2.2.12/ChangeLog
+  /usr/share/doc/gimp2-2.2.12/COPYING
+  /usr/share/doc/gimp2-2.2.12/HACKING
+  /usr/share/doc/gimp2-2.2.12/INSTALL
+  /usr/share/doc/gimp2-2.2.12/LICENSE
+  /usr/share/doc/gimp2-2.2.12/NEWS
+  /usr/share/doc/gimp2-2.2.12/README
+  /usr/share/doc/gimp2-2.2.12/README.i18n
+  /usr/share/doc/gimp2-2.2.12/README.win32
   /usr/share/gimp/2.0/brushes/10x10square.gbr
   /usr/share/gimp/2.0/brushes/10x10squareBlur.gbr
   /usr/share/gimp/2.0/brushes/11circle.gbr
@@ -1295,13 +1295,11 @@ Files included in the python package:
   /usr/lib/gimp/2.0/python/gimpfu.pyc
   /usr/lib/gimp/2.0/python/gimpfu.pyo
   /usr/lib/gimp/2.0/python/gimpmodule.dll
-  /usr/lib/gimp/2.0/python/gimpmodule.dll.a
   /usr/lib/gimp/2.0/python/gimpmodule.la
   /usr/lib/gimp/2.0/python/gimpplugin.py
   /usr/lib/gimp/2.0/python/gimpplugin.pyc
   /usr/lib/gimp/2.0/python/gimpplugin.pyo
   /usr/lib/gimp/2.0/python/gimpprocbrowsermodule.dll
-  /usr/lib/gimp/2.0/python/gimpprocbrowsermodule.dll.a
   /usr/lib/gimp/2.0/python/gimpprocbrowsermodule.la
   /usr/lib/gimp/2.0/python/gimpshelf.py
   /usr/lib/gimp/2.0/python/gimpshelf.pyc
@@ -1977,6 +1975,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 2.2.12-1 -----
+Version bump.
 
 ----- version 2.2.11-1 -----
 Version bump.
