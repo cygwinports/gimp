@@ -19,9 +19,9 @@ In  addition,  GIMP  has  several  scripting extension which allow for
 advanced non-interactive processing and creation of images.
 
 Runtime requirements:
-  cygwin-1.5.20-1
+  cygwin-1.5.21-2
   glib2-2.10.3-1
-  gtk2-x11-2.8.19-1
+  gtk2-x11-2.8.20-1
   libX11_6-1.0.2-1
   libXmu6-1.0.2-1
   libart_lgpl2-2.3.17-1
@@ -35,29 +35,29 @@ The python module and plugins require:
 Other plugins require some of the following:
 
   lcms-1.13-1
-  libXpm4-3.5.4.2-1
+  libXpm4-3.5.5-1
   libaa1-1.4rc5-1
   libexif-0.6.12-1
   libjpeg62-6b-11
   libmng-1.0.9-1
   libpng12-1.2.8-2
   librsvg2-2.14.4-1
-  libtiff5-3.7.3-1
-  libwmf-0.2.8.4-1
+  libtiff5-3.8.2-2
+  libwmf027-0.2.8.4-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1
+  cygwin-1.5.21-2
   autoconf2.5-2.59-2
   automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.2.3-1
+  binutils-20060709-1
+  cygport-0.2.5-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   gtk-doc-1.5-1
   intltool-0.35.0-1
   libtool1.5-1.5.22-1
-  make-3.80-1
+  make-3.81-1
   pkg-config-0.20-1
   sed-4.1.5-1
 
@@ -70,18 +70,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-2.2.12-X-src.tar.bz2
+  unpack gimp2-2.2.13-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-2.2.12-X.cygport all
+  cygport ./gimp2-2.2.13-X.cygport all
 
 This will create:
-  /usr/src/gimp2-2.2.12-X-src.tar.bz2
-  /usr/src/gimp2-2.2.12-X.tar.bz2
-  /usr/src/gimp2-devel-2.2.12-X.tar.bz2
-  /usr/src/gimp2-doc-2.2.12-X.tar.bz2
-  /usr/src/gimp2-python-2.2.12-X.tar.bz2
+  /usr/src/gimp2-2.2.13-X-src.tar.bz2
+  /usr/src/gimp2-2.2.13-X.tar.bz2
+  /usr/src/gimp2-devel-2.2.13-X.tar.bz2
+  /usr/src/gimp2-doc-2.2.13-X.tar.bz2
+  /usr/src/gimp2-python-2.2.13-X.tar.bz2
 
 -------------------------------------------
 
@@ -285,17 +285,17 @@ Files included in the binary package:
   /usr/lib/gimp/2.0/plug-ins/xpm.exe
   /usr/lib/gimp/2.0/plug-ins/xwd.exe
   /usr/lib/gimp/2.0/plug-ins/zealouscrop.exe
-  /usr/share/doc/Cygwin/gimp2-2.2.12.README
-  /usr/share/doc/gimp2-2.2.12/AUTHORS
-  /usr/share/doc/gimp2-2.2.12/ChangeLog
-  /usr/share/doc/gimp2-2.2.12/COPYING
-  /usr/share/doc/gimp2-2.2.12/HACKING
-  /usr/share/doc/gimp2-2.2.12/INSTALL
-  /usr/share/doc/gimp2-2.2.12/LICENSE
-  /usr/share/doc/gimp2-2.2.12/NEWS
-  /usr/share/doc/gimp2-2.2.12/README
-  /usr/share/doc/gimp2-2.2.12/README.i18n
-  /usr/share/doc/gimp2-2.2.12/README.win32
+  /usr/share/doc/Cygwin/gimp2-2.2.13.README
+  /usr/share/doc/gimp2-2.2.13/AUTHORS
+  /usr/share/doc/gimp2-2.2.13/ChangeLog
+  /usr/share/doc/gimp2-2.2.13/COPYING
+  /usr/share/doc/gimp2-2.2.13/HACKING
+  /usr/share/doc/gimp2-2.2.13/INSTALL
+  /usr/share/doc/gimp2-2.2.13/LICENSE
+  /usr/share/doc/gimp2-2.2.13/NEWS
+  /usr/share/doc/gimp2-2.2.13/README
+  /usr/share/doc/gimp2-2.2.13/README.i18n
+  /usr/share/doc/gimp2-2.2.13/README.win32
   /usr/share/gimp/2.0/brushes/10x10square.gbr
   /usr/share/gimp/2.0/brushes/10x10squareBlur.gbr
   /usr/share/gimp/2.0/brushes/11circle.gbr
@@ -1975,6 +1975,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 2.2.13-1 -----
+Version bump.
 
 ----- version 2.2.12-1 -----
 Version bump.
