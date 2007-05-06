@@ -20,8 +20,8 @@ advanced non-interactive processing and creation of images.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  glib2-2.12.9-1
-  gtk2-x11-2.10.9-1
+  glib2-2.12.11-1
+  gtk2-x11-2.10.11-1
   libX11_6-1.1.1-1
   libXmu6-1.0.3-1
   libart_lgpl2-2.3.19-1
@@ -1975,6 +1975,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 2.2.14-2 -----
+Fixed gimptool-2.0 --datadir output.
 
 ----- version 2.2.14-1 -----
 Version bump.
