@@ -1,5 +1,5 @@
 category: Graphics Gnome Python
-requires: cygwin gimp2 pygtk2 python
+requires: cygwin gimp2 python python-gobject2 python-gtk2
 external-source: gimp2
 sdesc: "GNU Image Manipulation Program version 2 (Python modules and plug-ins)"
 ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and

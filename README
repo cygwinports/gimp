@@ -29,8 +29,9 @@ Runtime requirements:
 
 The python module and plugins require:
 
-  pygtk2-2.10.4-1
-  python-2.4.3-1
+  python-2.5.1-1
+  python-gobject2-2.12.3-2
+  python-gtk2-2.10.4-2
 
 Other plugins require some of the following:
 
@@ -54,8 +55,8 @@ Build requirements:
   cygport-0.2.11-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
-  gtk-doc-1.7-1
-  intltool-0.35.4-1
+  gtk-doc-1.8-1
+  intltool-0.35.5-1
   libtool1.5-1.5.23a-2
   make-3.81-1
   pkg-config-0.21-1
@@ -70,23 +71,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-2.2.14-X-src.tar.bz2
+  unpack gimp2-2.2.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-2.2.14-X.cygport all
+  cygport ./gimp2-2.2.15-X.cygport all
 
 This will create:
-  /usr/src/gimp2-2.2.14-X-src.tar.bz2
-  /usr/src/gimp2-2.2.14-X.tar.bz2
-  /usr/src/gimp2-devel-2.2.14-X.tar.bz2
-  /usr/src/gimp2-doc-2.2.14-X.tar.bz2
-  /usr/src/gimp2-python-2.2.14-X.tar.bz2
+  /usr/src/gimp2-2.2.15-X-src.tar.bz2
+  /usr/src/gimp2-2.2.15-X.tar.bz2
+  /usr/src/gimp2-devel-2.2.15-X.tar.bz2
+  /usr/src/gimp2-doc-2.2.15-X.tar.bz2
+  /usr/src/gimp2-python-2.2.15-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(gimp2)
   /etc/gimp/2.0/controllerrc
   /etc/gimp/2.0/gimprc
   /etc/gimp/2.0/gtkrc
@@ -285,17 +287,17 @@ Files included in the binary package:
   /usr/lib/gimp/2.0/plug-ins/xpm.exe
   /usr/lib/gimp/2.0/plug-ins/xwd.exe
   /usr/lib/gimp/2.0/plug-ins/zealouscrop.exe
-  /usr/share/doc/Cygwin/gimp2-2.2.14.README
-  /usr/share/doc/gimp2-2.2.14/AUTHORS
-  /usr/share/doc/gimp2-2.2.14/ChangeLog
-  /usr/share/doc/gimp2-2.2.14/COPYING
-  /usr/share/doc/gimp2-2.2.14/HACKING
-  /usr/share/doc/gimp2-2.2.14/INSTALL
-  /usr/share/doc/gimp2-2.2.14/LICENSE
-  /usr/share/doc/gimp2-2.2.14/NEWS
-  /usr/share/doc/gimp2-2.2.14/README
-  /usr/share/doc/gimp2-2.2.14/README.i18n
-  /usr/share/doc/gimp2-2.2.14/README.win32
+  /usr/share/doc/Cygwin/gimp2-2.2.15.README
+  /usr/share/doc/gimp2-2.2.15/AUTHORS
+  /usr/share/doc/gimp2-2.2.15/ChangeLog
+  /usr/share/doc/gimp2-2.2.15/COPYING
+  /usr/share/doc/gimp2-2.2.15/HACKING
+  /usr/share/doc/gimp2-2.2.15/INSTALL
+  /usr/share/doc/gimp2-2.2.15/LICENSE
+  /usr/share/doc/gimp2-2.2.15/NEWS
+  /usr/share/doc/gimp2-2.2.15/README
+  /usr/share/doc/gimp2-2.2.15/README.i18n
+  /usr/share/doc/gimp2-2.2.15/README.win32
   /usr/share/gimp/2.0/brushes/10x10square.gbr
   /usr/share/gimp/2.0/brushes/10x10squareBlur.gbr
   /usr/share/gimp/2.0/brushes/11circle.gbr
@@ -1276,8 +1278,7 @@ Files included in the binary package:
   /usr/share/man/man1/gimp-remote-2.2.1.gz
   /usr/share/man/man5/gimprc-2.2.5.gz
 
-Files included in the python package:
-
+(gimp2-python)
   /usr/lib/gimp/2.0/environ/pygimp.env
   /usr/lib/gimp/2.0/plug-ins/clothify.py
   /usr/lib/gimp/2.0/plug-ins/colorxhtml.py
@@ -1309,8 +1310,7 @@ Files included in the python package:
   /usr/lib/gimp/2.0/python/gimpui.pyo
   /usr/lib/gimp/2.0/python/pygimp-logo.png
 
-Files included in the devel package:
-
+(gimp2-devel)
   /usr/bin/gimptool-2.0
   /usr/include/gimp-2.0/libgimp/gimp.h
   /usr/include/gimp-2.0/libgimp/gimpaspectpreview.h
@@ -1492,8 +1492,7 @@ Files included in the devel package:
   /usr/share/aclocal/gimp-2.0.m4
   /usr/share/man/man1/gimptool-2.0.1.gz
 
-Files included in the doc package:
-
+(gimp2-doc)
   /usr/share/gtk-doc/html/libgimp/GimpAspectPreview.html
   /usr/share/gtk-doc/html/libgimp/gimpdefinitions.html
   /usr/share/gtk-doc/html/libgimp/GimpDrawablePreview.html
@@ -1975,6 +1974,9 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 2.2.15-1 -----
+Version bump; built for python-2.5.
 
 ----- version 2.2.14-2 -----
 Fixed gimptool-2.0 --datadir output.
