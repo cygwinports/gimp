@@ -24,20 +24,11 @@ Runtime requirements:
   gtk2-x11-2.10.13-1
   libX11_6-1.1.1-1
   libXmu6-1.0.3-1
-  libart_lgpl2-2.3.19-1
-  libgtkhtml2-2.11.0-1
-
-The python module and plugins require:
-
-  python-2.5.1-3
-  python-gobject2-2.12.3-2
-  python-gtk2-2.10.5-1
-
-Other plugins require some of the following:
-
   libXpm4-3.5.6-1
   libaa1-1.4rc5-1
+  libart_lgpl2-2.3.19-1
   libexif12-0.6.16-1
+  libgtkhtml2-2.11.0-1
   libjpeg62-6b-12
   liblcms1-1.16-2
   libmng1-1.0.9-2
@@ -45,6 +36,10 @@ Other plugins require some of the following:
   librsvg2-2.16.1-1
   libtiff5-3.8.2-3
   libwmf027-0.2.8.4-4
+(gimp2-python)
+  python-2.5.1-3
+  python-gobject2-2.12.3-2
+  python-gtk2-2.10.5-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -52,7 +47,7 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.1-1
+  cygport-0.3.5-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gtk-doc-1.8-1
@@ -71,17 +66,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-2.2.16-X-src.tar.bz2
+  unpack gimp2-2.2.17-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-2.2.16-X.cygport all
+  cygport ./gimp2-2.2.17-X.cygport all
 
 This will create:
-  /usr/src/gimp2-2.2.16-X-src.tar.bz2
-  /usr/src/gimp2-2.2.16-X.tar.bz2
-  /usr/src/gimp2-devel-2.2.16-X.tar.bz2
-  /usr/src/gimp2-python-2.2.16-X.tar.bz2
+  /usr/src/gimp2-2.2.17-X-src.tar.bz2
+  /usr/src/gimp2-2.2.17-X.tar.bz2
+  /usr/src/gimp2-devel-2.2.17-X.tar.bz2
+  /usr/src/gimp2-python-2.2.17-X.tar.bz2
 
 -------------------------------------------
 
@@ -286,17 +281,17 @@ Files included in the binary packages:
   /usr/lib/gimp/2.0/plug-ins/xpm.exe
   /usr/lib/gimp/2.0/plug-ins/xwd.exe
   /usr/lib/gimp/2.0/plug-ins/zealouscrop.exe
-  /usr/share/doc/Cygwin/gimp2-2.2.16.README
-  /usr/share/doc/gimp2-2.2.16/AUTHORS
-  /usr/share/doc/gimp2-2.2.16/ChangeLog
-  /usr/share/doc/gimp2-2.2.16/COPYING
-  /usr/share/doc/gimp2-2.2.16/HACKING
-  /usr/share/doc/gimp2-2.2.16/INSTALL
-  /usr/share/doc/gimp2-2.2.16/LICENSE
-  /usr/share/doc/gimp2-2.2.16/NEWS
-  /usr/share/doc/gimp2-2.2.16/README
-  /usr/share/doc/gimp2-2.2.16/README.i18n
-  /usr/share/doc/gimp2-2.2.16/README.win32
+  /usr/share/doc/Cygwin/gimp2-2.2.17.README
+  /usr/share/doc/gimp2-2.2.17/AUTHORS
+  /usr/share/doc/gimp2-2.2.17/ChangeLog
+  /usr/share/doc/gimp2-2.2.17/COPYING
+  /usr/share/doc/gimp2-2.2.17/HACKING
+  /usr/share/doc/gimp2-2.2.17/INSTALL
+  /usr/share/doc/gimp2-2.2.17/LICENSE
+  /usr/share/doc/gimp2-2.2.17/NEWS
+  /usr/share/doc/gimp2-2.2.17/README
+  /usr/share/doc/gimp2-2.2.17/README.i18n
+  /usr/share/doc/gimp2-2.2.17/README.win32
   /usr/share/gimp/2.0/brushes/10x10square.gbr
   /usr/share/gimp/2.0/brushes/10x10squareBlur.gbr
   /usr/share/gimp/2.0/brushes/11circle.gbr
@@ -1971,6 +1966,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.2.17-1 -----
+Version bump.
 
 ----- version 2.2.16-1 -----
 Version bump.
