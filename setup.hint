@@ -1,5 +1,5 @@
 category: Graphics Gnome
-requires: cygwin glib2 gtk2-x11 libX11_6 libXmu6 libart_lgpl2 libgtkhtml2 aalib bzip2 gzip libXpm4 libexif12 libjpeg62 liblcms1 libmng1 libpng12 librsvg2 libtiff5 libwmf027
+requires: cygwin glib2 gdk-pixbuf2 gnome-keyring gnome-vfs2 gtk2-x11 libX11_6 libXext6 libXmu6 libXpm4 libaa1 libart_lgpl2 libcairo2 libdbus-glib_1_2 libdbus1_3 libexif12 libfontconfig1 libfreetype26 libgnomeui2 libgtkhtml2 libintl8 libjpeg62 liblcms1 libmng1 libpng12 libpoppler-glib_2 librsvg2 libtiff5 libwmf027 pango zlib
 sdesc: "GNU Image Manipulation Program version 2"
 ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and
 manipulate images. It can load and save a variety of image formats and

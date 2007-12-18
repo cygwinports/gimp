@@ -1,5 +1,5 @@
 category: Gnome Graphics
-requires: cygwin glib2-devel gtk2-x11-devel
+requires: cygwin gimp2 glib2-devel gtk2-x11-devel
 external-source: gimp2
 sdesc: "GNU Image Manipulation Program version 2 (development files)"
 ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and
