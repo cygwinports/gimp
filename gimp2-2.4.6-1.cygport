@@ -1,0 +1,50 @@
+inherit python gnome2
+
+DESCRIPTION="GNU Image Manipulation Program"
+HOMEPAGE="http://www.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/v${PV_MAJ_MIN}/gimp-${PV}.tar.bz2"
+SRC_DIR="gimp-${PV}"
+
+gimpdir=/usr/lib/gimp/2.0
+
+PKG_NAMES="${PN} ${PN}-devel ${PN}-python"
+PKG_HINTS="setup devel python"
+PKG_CONTENTS[0]="--exclude=python --exclude=*.py --exclude=pygimp.*
+                 --exclude=gimptool-* --exclude=aclocal
+                 --exclude=gtk-doc --exclude=gimp20-python.mo
+                 etc/ usr/bin/ usr/lib/gimp/ usr/share/"
+PKG_CONTENTS[1]="usr/bin/gimptool-2.0 usr/include/ usr/lib/lib*
+                 usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/gtk-doc/
+                 usr/share/man/man1/gimptool-*"
+PKG_CONTENTS[2]="${gimpdir#/}/environ/pygimp.env
+                 ${gimpdir#/}/interpreters/pygimp.interp
+                 ${gimpdir#/}/plug-ins/*.py ${gimpdir#/}/python/
+                 usr/share/locale/*/*/gimp20-python.mo"
+
+DIFF_EXCLUDES="devel-docs"
+
+src_compile() {
+	cd ${S}
+	gnome2_autoreconf
+
+	cd ${B}
+	cygconf \
+		--enable-default-binary \
+		--enable-gimp-console \
+		--enable-gtk-doc \
+		--enable-mmx \
+		--enable-python \
+		--disable-static \
+		--with-shm=sysv \
+		--without-linux-input
+
+	cygmake PYLINK_LIBS="${LIBPYTHON}"
+}
+
+src_install() {
+	cd ${B}
+	dodir /usr/share/{applications,application-registry,mime-info}
+	cyginstall
+
+	dodoc ${S}/README.i18n
+}
