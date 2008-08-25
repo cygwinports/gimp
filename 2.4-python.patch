@@ -1,41 +1,5 @@
 --- origsrc/gimp-2.4.6/configure.in	2008-05-23 04:41:20.000000000 -0500
 +++ src/gimp-2.4.6/configure.in	2008-06-01 01:39:39.609375000 -0500
-@@ -727,7 +727,7 @@
- esac
- 
- 
--if test "x$platform_win32" = "xyes"; then
-+if test "x$os_win32" = "xyes"; then
-   shmtype=win32
- elif test "x$shmtype" = "xsysv"; then
-   AC_CHECK_HEADER(sys/ipc.h,
-@@ -810,7 +810,7 @@
- AC_MSG_CHECKING([whether symbols are prefixed])
- 
- case "$host_os" in
--  mingw*)
-+  mingw* | cygwin*)
-     SYMPREFIX='_'
-     ;;
-   darwin* | rhapsody* | machten*)
-@@ -903,7 +903,7 @@
-    LIBSCREENSHOT="$X_LIBS -lX11"
- 
-    dnl doc-shooter is X11 specific
--   DOC_SHOOTER=doc-shooter
-+   doc_shooter=yes
- 
-    gimp_save_CFLAGS="$CFLAGS"
-    gimp_save_LDFLAGS="$LDFLAGS"
-@@ -939,7 +939,7 @@
- AC_SUBST(LIBXMU)
- AC_SUBST(LIBSCREENSHOT)
- 
--AC_SUBST(DOC_SHOOTER)
-+AM_CONDITIONAL(BUILD_DOC_SHOOTER, test "x$doc_shooter" == "xyes")
- 
- AC_SUBST(GIMP_REMOTE)
- AC_SUBST(GIMP_COMMAND)
 @@ -1593,15 +1593,22 @@
    dnl This might be able to be figured out from distutils, but it's
    dnl not documented so we won't rely on internal implementation

@@ -3,6 +3,13 @@ inherit python gnome2
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v${PV_MAJ_MIN}/gimp-${PV}.tar.bz2"
+PATCH_URI="
+	2.4-shm.patch
+	2.4-symbols.patch
+	2.4-doc-shooter.patch
+	2.4-python.patch
+"
+
 SRC_DIR="gimp-${PV}"
 
 gimpdir=/usr/lib/gimp/2.0
