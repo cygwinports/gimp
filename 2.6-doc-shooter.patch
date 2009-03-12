@@ -1,0 +1,11 @@
+--- origsrc/gimp-2.6.3/configure.in	2008-12-01 23:18:52.031250000 -0600
++++ src/gimp-2.6.3/configure.in	2008-12-01 23:19:29.531250000 -0600
+@@ -914,7 +914,7 @@
+ if test "$gdk_target" = x11; then
+ 
+    # doc-shooter is X11 specific
+-   DOC_SHOOTER=doc-shooter
++   DOC_SHOOTER="doc-shooter\$(EXEEXT)"
+ 
+    # screenshot plug-in needs to link to X11 explicitely
+    SCREENSHOT_LIBS="$X_LIBS -lX11"
