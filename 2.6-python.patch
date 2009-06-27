@@ -47,3 +47,14 @@
  
  install-interp-file:
  	$(mkinstalldirs) '$(DESTDIR)$(pyinterpdir)'
+--- origsrc/gimp-2.6.6/plug-ins/pygimp/plug-ins/Makefile.am	2008-11-20 16:43:45.000000000 -0600
++++ src/gimp-2.6.6/plug-ins/pygimp/plug-ins/Makefile.am	2009-06-26 19:30:05.158198000 -0500
+@@ -21,6 +21,6 @@ test_scripts = \
+ 
+ pluginexec_SCRIPTS = $(scripts)
+ 
+-pluginexec_DATA = pyconsole.py
++pluginexec_PYTHON = pyconsole.py
+ 
+-EXTRA_DIST = $(pluginexec_DATA) $(scripts) $(test_scripts)
++EXTRA_DIST = $(pluginexec_PYTHON) $(scripts) $(test_scripts)

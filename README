@@ -19,41 +19,41 @@ In  addition,  GIMP  has  several  scripting extension which allow for
 advanced non-interactive processing and creation of images.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  gdk-pixbuf2-2.12.11-1
-  glib2-2.16.5-1
-  gnome-keyring-2.22.2-1
-  gnome-vfs2-2.22.0-1
-  gtk2-x11-2.12.11-1
-  libX11_6-1.1.3-1
-  libXext6-1.0.3-1
-  libXmu6-1.0.3-1
-  libXpm4-3.5.7-1
-  libaa1-1.4rc5-1
-  libart_lgpl2-2.3.20-1
-  libcairo2-1.6.4-1
-  libdbus-glib_1_2-0.76-1
-  libdbus1_3-1.2.1-1
-  libexif12-0.6.16-2
-  libfontconfig1-2.6.0-1
-  libfreetype26-2.3.7-1
-  libgnomeui2-2.22.1-1
-  libgtkhtml2-2.11.1-1
-  libintl8-0.15-1
-  libjpeg62-6b-12
+  cygwin-1.7.0-50
+  libaa1-1.4rc5-3
+  libbabl0.0_0-0.0.22-10
+  libcairo2-1.8.6-10
+  libdbus-glib_1_2-0.80-10
+  libdbus1_3-1.2.14-1
+  libexif12-0.6.17-10
+  libfontconfig1-2.6.0-10
+  libfreetype6-2.3.9-1
+  libgcc1-4.3.2-2
+  libgdk_pixbuf2.0_0-2.16.2-1
+  libgegl0.0_0-0.0.22-10
+  libglib2.0_0-2.20.3-1
+  libgtk2.0_0-2.16.2-1
+  libintl8-0.17-11
+  libjpeg62-6b-20
   liblcms1-1.17-1
-  libmng1-1.0.10-2
-  libpng12-1.2.31-1
-  libpoppler-glib_3-0.8.5-1
-  librsvg2-2.22.2-1
-  libtiff5-3.8.2-3
-  libwmf027-0.2.8.4-4
-  pango-1.20.5-1
-  zlib-1.2.3-2
+  libmng1-1.0.10-1
+  libpango1.0_0-1.24.2-1
+  libpng12-1.2.35-10
+  libpoppler-glib_4-0.10.7-1
+  librsvg2_2-2.26.0-1
+  libtiff5-3.8.2-10
+  libwmf027-0.2.8.4-3
+  libX11_6-1.2-10
+  libXext6-1.0.5-10
+  libXfixes3-4.0.3-10
+  libXmu6-1.0.4-10
+  libXpm4-3.5.7-10
+  python-2.5.4-10
+  zlib0-1.2.3-10
 (gimp2-python)
-  python-2.5.2-3
-  python-gobject2-2.14.2-1
-  python-gtk2-2.12.1-1
+  python-2.5.4-10
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -80,17 +80,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gimp2-2.4.7-X-src.tar.bz2
+  unpack gimp2-2.6.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gimp2-2.4.7-X.cygport all
+  cygport ./gimp2-2.6.6-X.cygport all
 
 This will create:
-  /usr/src/gimp2-2.4.7-X-src.tar.bz2
-  /usr/src/gimp2-2.4.7-X.tar.bz2
-  /usr/src/gimp2-devel-2.4.7-X.tar.bz2
-  /usr/src/gimp2-python-2.4.7-X.tar.bz2
+  /usr/src/gimp2-2.6.6-X-src.tar.bz2
+  /usr/src/gimp2-2.6.6-X.tar.bz2
+  /usr/src/gimp2-devel-2.6.6-X.tar.bz2
+  /usr/src/gimp2-python-2.6.6-X.tar.bz2
 
 -------------------------------------------
 
@@ -115,215 +115,209 @@ Files included in the binary packages:
   /usr/bin/cyggimpthumb-2.0-0.dll
   /usr/bin/cyggimpui-2.0-0.dll
   /usr/bin/cyggimpwidgets-2.0-0.dll
-  /usr/bin/gimp-2.4.exe
-  /usr/bin/gimp-console-2.4.exe
+  /usr/bin/gimp-2.6.exe
+  /usr/bin/gimp-console-2.6.exe
   /usr/bin/gimp-console.exe
-  /usr/bin/gimp-remote
-  /usr/bin/gimp-remote-2.4.exe
   /usr/bin/gimp.exe
   /usr/lib/gimp/2.0/environ/default.env
   /usr/lib/gimp/2.0/interpreters/default.interp
-  /usr/lib/gimp/2.0/modules/cygcdisplay_colorblind.dll
-  /usr/lib/gimp/2.0/modules/cygcdisplay_gamma.dll
-  /usr/lib/gimp/2.0/modules/cygcdisplay_highcontrast.dll
-  /usr/lib/gimp/2.0/modules/cygcdisplay_lcms.dll
-  /usr/lib/gimp/2.0/modules/cygcdisplay_proof.dll
-  /usr/lib/gimp/2.0/modules/cygcolorsel_cmyk.dll
-  /usr/lib/gimp/2.0/modules/cygcolorsel_triangle.dll
-  /usr/lib/gimp/2.0/modules/cygcolorsel_water.dll
-  /usr/lib/gimp/2.0/modules/libcdisplay_colorblind.la
-  /usr/lib/gimp/2.0/modules/libcdisplay_gamma.la
-  /usr/lib/gimp/2.0/modules/libcdisplay_highcontrast.la
-  /usr/lib/gimp/2.0/modules/libcdisplay_lcms.la
-  /usr/lib/gimp/2.0/modules/libcdisplay_proof.la
-  /usr/lib/gimp/2.0/modules/libcolorsel_cmyk.la
-  /usr/lib/gimp/2.0/modules/libcolorsel_triangle.la
-  /usr/lib/gimp/2.0/modules/libcolorsel_water.la
-  /usr/lib/gimp/2.0/plug-ins/AlienMap2.exe
-  /usr/lib/gimp/2.0/plug-ins/CEL.exe
-  /usr/lib/gimp/2.0/plug-ins/CML_explorer.exe
-  /usr/lib/gimp/2.0/plug-ins/FractalExplorer.exe
-  /usr/lib/gimp/2.0/plug-ins/Lighting.exe
-  /usr/lib/gimp/2.0/plug-ins/MapObject.exe
-  /usr/lib/gimp/2.0/plug-ins/aa.exe
-  /usr/lib/gimp/2.0/plug-ins/align_layers.exe
-  /usr/lib/gimp/2.0/plug-ins/animationplay.exe
-  /usr/lib/gimp/2.0/plug-ins/animoptimize.exe
+  /usr/lib/gimp/2.0/modules/cygcolor-selector-cmyk.dll
+  /usr/lib/gimp/2.0/modules/cygcolor-selector-water.dll
+  /usr/lib/gimp/2.0/modules/cygcolor-selector-wheel.dll
+  /usr/lib/gimp/2.0/modules/cygdisplay-filter-color-blind.dll
+  /usr/lib/gimp/2.0/modules/cygdisplay-filter-gamma.dll
+  /usr/lib/gimp/2.0/modules/cygdisplay-filter-high-contrast.dll
+  /usr/lib/gimp/2.0/modules/cygdisplay-filter-lcms.dll
+  /usr/lib/gimp/2.0/modules/cygdisplay-filter-proof.dll
+  /usr/lib/gimp/2.0/modules/libcolor-selector-cmyk.la
+  /usr/lib/gimp/2.0/modules/libcolor-selector-water.la
+  /usr/lib/gimp/2.0/modules/libcolor-selector-wheel.la
+  /usr/lib/gimp/2.0/modules/libdisplay-filter-color-blind.la
+  /usr/lib/gimp/2.0/modules/libdisplay-filter-gamma.la
+  /usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.la
+  /usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.la
+  /usr/lib/gimp/2.0/modules/libdisplay-filter-proof.la
+  /usr/lib/gimp/2.0/plug-ins/alien-map.exe
+  /usr/lib/gimp/2.0/plug-ins/align-layers.exe
+  /usr/lib/gimp/2.0/plug-ins/animation-optimize.exe
+  /usr/lib/gimp/2.0/plug-ins/animation-play.exe
   /usr/lib/gimp/2.0/plug-ins/antialias.exe
-  /usr/lib/gimp/2.0/plug-ins/apply_lens.exe
-  /usr/lib/gimp/2.0/plug-ins/autocrop.exe
-  /usr/lib/gimp/2.0/plug-ins/autostretch_hsv.exe
+  /usr/lib/gimp/2.0/plug-ins/apply-canvas.exe
   /usr/lib/gimp/2.0/plug-ins/blinds.exe
+  /usr/lib/gimp/2.0/plug-ins/blur-gauss-selective.exe
+  /usr/lib/gimp/2.0/plug-ins/blur-gauss.exe
+  /usr/lib/gimp/2.0/plug-ins/blur-motion.exe
   /usr/lib/gimp/2.0/plug-ins/blur.exe
-  /usr/lib/gimp/2.0/plug-ins/bmp.exe
-  /usr/lib/gimp/2.0/plug-ins/borderaverage.exe
-  /usr/lib/gimp/2.0/plug-ins/bumpmap.exe
-  /usr/lib/gimp/2.0/plug-ins/c_astretch.exe
+  /usr/lib/gimp/2.0/plug-ins/border-average.exe
+  /usr/lib/gimp/2.0/plug-ins/bump-map.exe
   /usr/lib/gimp/2.0/plug-ins/cartoon.exe
-  /usr/lib/gimp/2.0/plug-ins/ccanalyze.exe
-  /usr/lib/gimp/2.0/plug-ins/channel_mixer.exe
+  /usr/lib/gimp/2.0/plug-ins/channel-mixer.exe
   /usr/lib/gimp/2.0/plug-ins/checkerboard.exe
-  /usr/lib/gimp/2.0/plug-ins/color_enhance.exe
+  /usr/lib/gimp/2.0/plug-ins/cml-explorer.exe
+  /usr/lib/gimp/2.0/plug-ins/color-cube-analyze.exe
+  /usr/lib/gimp/2.0/plug-ins/color-enhance.exe
+  /usr/lib/gimp/2.0/plug-ins/color-exchange.exe
+  /usr/lib/gimp/2.0/plug-ins/color-rotate.exe
+  /usr/lib/gimp/2.0/plug-ins/color-to-alpha.exe
   /usr/lib/gimp/2.0/plug-ins/colorify.exe
   /usr/lib/gimp/2.0/plug-ins/colormap-remap.exe
-  /usr/lib/gimp/2.0/plug-ins/colortoalpha.exe
   /usr/lib/gimp/2.0/plug-ins/compose.exe
-  /usr/lib/gimp/2.0/plug-ins/compressor.exe
-  /usr/lib/gimp/2.0/plug-ins/convmatrix.exe
-  /usr/lib/gimp/2.0/plug-ins/csource.exe
+  /usr/lib/gimp/2.0/plug-ins/contrast-normalize.exe
+  /usr/lib/gimp/2.0/plug-ins/contrast-retinex.exe
+  /usr/lib/gimp/2.0/plug-ins/contrast-stretch-hsv.exe
+  /usr/lib/gimp/2.0/plug-ins/contrast-stretch.exe
+  /usr/lib/gimp/2.0/plug-ins/convolution-matrix.exe
+  /usr/lib/gimp/2.0/plug-ins/crop-auto.exe
+  /usr/lib/gimp/2.0/plug-ins/crop-zealous.exe
   /usr/lib/gimp/2.0/plug-ins/cubism.exe
-  /usr/lib/gimp/2.0/plug-ins/curve_bend.exe
+  /usr/lib/gimp/2.0/plug-ins/curve-bend.exe
   /usr/lib/gimp/2.0/plug-ins/decompose.exe
   /usr/lib/gimp/2.0/plug-ins/deinterlace.exe
-  /usr/lib/gimp/2.0/plug-ins/depthmerge.exe
-  /usr/lib/gimp/2.0/plug-ins/desktop-link.exe
+  /usr/lib/gimp/2.0/plug-ins/depth-merge.exe
   /usr/lib/gimp/2.0/plug-ins/despeckle.exe
   /usr/lib/gimp/2.0/plug-ins/destripe.exe
-  /usr/lib/gimp/2.0/plug-ins/dicom.exe
   /usr/lib/gimp/2.0/plug-ins/diffraction.exe
   /usr/lib/gimp/2.0/plug-ins/displace.exe
-  /usr/lib/gimp/2.0/plug-ins/dog.exe
+  /usr/lib/gimp/2.0/plug-ins/edge-dog.exe
+  /usr/lib/gimp/2.0/plug-ins/edge-laplace.exe
+  /usr/lib/gimp/2.0/plug-ins/edge-neon.exe
+  /usr/lib/gimp/2.0/plug-ins/edge-sobel.exe
   /usr/lib/gimp/2.0/plug-ins/edge.exe
   /usr/lib/gimp/2.0/plug-ins/emboss.exe
   /usr/lib/gimp/2.0/plug-ins/engrave.exe
-  /usr/lib/gimp/2.0/plug-ins/exchange.exe
-  /usr/lib/gimp/2.0/plug-ins/faxg3.exe
+  /usr/lib/gimp/2.0/plug-ins/file-aa.exe
+  /usr/lib/gimp/2.0/plug-ins/file-bmp.exe
+  /usr/lib/gimp/2.0/plug-ins/file-cel.exe
+  /usr/lib/gimp/2.0/plug-ins/file-compressor.exe
+  /usr/lib/gimp/2.0/plug-ins/file-csource.exe
+  /usr/lib/gimp/2.0/plug-ins/file-desktop-link.exe
+  /usr/lib/gimp/2.0/plug-ins/file-dicom.exe
+  /usr/lib/gimp/2.0/plug-ins/file-faxg3.exe
+  /usr/lib/gimp/2.0/plug-ins/file-fits.exe
+  /usr/lib/gimp/2.0/plug-ins/file-fli.exe
+  /usr/lib/gimp/2.0/plug-ins/file-gbr.exe
+  /usr/lib/gimp/2.0/plug-ins/file-gif-load.exe
+  /usr/lib/gimp/2.0/plug-ins/file-gif-save.exe
+  /usr/lib/gimp/2.0/plug-ins/file-gih.exe
+  /usr/lib/gimp/2.0/plug-ins/file-glob.exe
+  /usr/lib/gimp/2.0/plug-ins/file-header.exe
+  /usr/lib/gimp/2.0/plug-ins/file-html-table.exe
+  /usr/lib/gimp/2.0/plug-ins/file-ico.exe
+  /usr/lib/gimp/2.0/plug-ins/file-jpeg.exe
+  /usr/lib/gimp/2.0/plug-ins/file-mng.exe
+  /usr/lib/gimp/2.0/plug-ins/file-pat.exe
+  /usr/lib/gimp/2.0/plug-ins/file-pcx.exe
+  /usr/lib/gimp/2.0/plug-ins/file-pdf.exe
+  /usr/lib/gimp/2.0/plug-ins/file-pix.exe
+  /usr/lib/gimp/2.0/plug-ins/file-png.exe
+  /usr/lib/gimp/2.0/plug-ins/file-pnm.exe
+  /usr/lib/gimp/2.0/plug-ins/file-ps.exe
+  /usr/lib/gimp/2.0/plug-ins/file-psd-load.exe
+  /usr/lib/gimp/2.0/plug-ins/file-psd-save.exe
+  /usr/lib/gimp/2.0/plug-ins/file-psp.exe
+  /usr/lib/gimp/2.0/plug-ins/file-raw.exe
+  /usr/lib/gimp/2.0/plug-ins/file-sgi.exe
+  /usr/lib/gimp/2.0/plug-ins/file-sunras.exe
+  /usr/lib/gimp/2.0/plug-ins/file-svg.exe
+  /usr/lib/gimp/2.0/plug-ins/file-tga.exe
+  /usr/lib/gimp/2.0/plug-ins/file-tiff-load.exe
+  /usr/lib/gimp/2.0/plug-ins/file-tiff-save.exe
+  /usr/lib/gimp/2.0/plug-ins/file-uri.exe
+  /usr/lib/gimp/2.0/plug-ins/file-wmf.exe
+  /usr/lib/gimp/2.0/plug-ins/file-xbm.exe
+  /usr/lib/gimp/2.0/plug-ins/file-xjt.exe
+  /usr/lib/gimp/2.0/plug-ins/file-xpm.exe
+  /usr/lib/gimp/2.0/plug-ins/file-xwd.exe
   /usr/lib/gimp/2.0/plug-ins/film.exe
-  /usr/lib/gimp/2.0/plug-ins/fits.exe
+  /usr/lib/gimp/2.0/plug-ins/filter-pack.exe
   /usr/lib/gimp/2.0/plug-ins/flame.exe
-  /usr/lib/gimp/2.0/plug-ins/flarefx.exe
-  /usr/lib/gimp/2.0/plug-ins/fp.exe
-  /usr/lib/gimp/2.0/plug-ins/fractaltrace.exe
-  /usr/lib/gimp/2.0/plug-ins/gauss.exe
-  /usr/lib/gimp/2.0/plug-ins/gbr.exe
+  /usr/lib/gimp/2.0/plug-ins/fractal-explorer.exe
+  /usr/lib/gimp/2.0/plug-ins/fractal-trace.exe
+  /usr/lib/gimp/2.0/plug-ins/gee-zoom.exe
   /usr/lib/gimp/2.0/plug-ins/gee.exe
-  /usr/lib/gimp/2.0/plug-ins/gee_zoom.exe
   /usr/lib/gimp/2.0/plug-ins/gfig.exe
-  /usr/lib/gimp/2.0/plug-ins/gflare.exe
-  /usr/lib/gimp/2.0/plug-ins/gfli.exe
-  /usr/lib/gimp/2.0/plug-ins/gif-load.exe
-  /usr/lib/gimp/2.0/plug-ins/gif-save.exe
-  /usr/lib/gimp/2.0/plug-ins/gih.exe
   /usr/lib/gimp/2.0/plug-ins/gimpressionist.exe
-  /usr/lib/gimp/2.0/plug-ins/glasstile.exe
-  /usr/lib/gimp/2.0/plug-ins/glob.exe
-  /usr/lib/gimp/2.0/plug-ins/gqbist.exe
-  /usr/lib/gimp/2.0/plug-ins/gradmap.exe
+  /usr/lib/gimp/2.0/plug-ins/gradient-flare.exe
+  /usr/lib/gimp/2.0/plug-ins/gradient-map.exe
   /usr/lib/gimp/2.0/plug-ins/grid.exe
-  /usr/lib/gimp/2.0/plug-ins/gtm.exe
   /usr/lib/gimp/2.0/plug-ins/guillotine.exe
-  /usr/lib/gimp/2.0/plug-ins/header.exe
   /usr/lib/gimp/2.0/plug-ins/help.exe
-  /usr/lib/gimp/2.0/plug-ins/helpbrowser.exe
   /usr/lib/gimp/2.0/plug-ins/hot.exe
-  /usr/lib/gimp/2.0/plug-ins/ifscompose.exe
+  /usr/lib/gimp/2.0/plug-ins/ifs-compose.exe
   /usr/lib/gimp/2.0/plug-ins/illusion.exe
   /usr/lib/gimp/2.0/plug-ins/imagemap.exe
   /usr/lib/gimp/2.0/plug-ins/iwarp.exe
   /usr/lib/gimp/2.0/plug-ins/jigsaw.exe
-  /usr/lib/gimp/2.0/plug-ins/jpeg.exe
-  /usr/lib/gimp/2.0/plug-ins/laplace.exe
   /usr/lib/gimp/2.0/plug-ins/lcms.exe
-  /usr/lib/gimp/2.0/plug-ins/lens.exe
-  /usr/lib/gimp/2.0/plug-ins/lic.exe
+  /usr/lib/gimp/2.0/plug-ins/lens-apply.exe
+  /usr/lib/gimp/2.0/plug-ins/lens-distortion.exe
+  /usr/lib/gimp/2.0/plug-ins/lens-flare.exe
+  /usr/lib/gimp/2.0/plug-ins/lighting.exe
   /usr/lib/gimp/2.0/plug-ins/mail.exe
-  /usr/lib/gimp/2.0/plug-ins/mapcolor.exe
-  /usr/lib/gimp/2.0/plug-ins/max_rgb.exe
+  /usr/lib/gimp/2.0/plug-ins/map-object.exe
+  /usr/lib/gimp/2.0/plug-ins/max-rgb.exe
   /usr/lib/gimp/2.0/plug-ins/maze.exe
-  /usr/lib/gimp/2.0/plug-ins/mblur.exe
   /usr/lib/gimp/2.0/plug-ins/metadata.exe
-  /usr/lib/gimp/2.0/plug-ins/mng.exe
   /usr/lib/gimp/2.0/plug-ins/mosaic.exe
-  /usr/lib/gimp/2.0/plug-ins/neon.exe
   /usr/lib/gimp/2.0/plug-ins/newsprint.exe
-  /usr/lib/gimp/2.0/plug-ins/nlfilt.exe
-  /usr/lib/gimp/2.0/plug-ins/noisify.exe
-  /usr/lib/gimp/2.0/plug-ins/normalize.exe
+  /usr/lib/gimp/2.0/plug-ins/nl-filter.exe
+  /usr/lib/gimp/2.0/plug-ins/noise-hsv.exe
+  /usr/lib/gimp/2.0/plug-ins/noise-randomize.exe
+  /usr/lib/gimp/2.0/plug-ins/noise-rgb.exe
+  /usr/lib/gimp/2.0/plug-ins/noise-solid.exe
+  /usr/lib/gimp/2.0/plug-ins/noise-spread.exe
   /usr/lib/gimp/2.0/plug-ins/nova.exe
   /usr/lib/gimp/2.0/plug-ins/oilify.exe
   /usr/lib/gimp/2.0/plug-ins/pagecurl.exe
-  /usr/lib/gimp/2.0/plug-ins/papertile.exe
-  /usr/lib/gimp/2.0/plug-ins/pat.exe
-  /usr/lib/gimp/2.0/plug-ins/pcx.exe
   /usr/lib/gimp/2.0/plug-ins/photocopy.exe
-  /usr/lib/gimp/2.0/plug-ins/pix.exe
   /usr/lib/gimp/2.0/plug-ins/pixelize.exe
   /usr/lib/gimp/2.0/plug-ins/plasma.exe
   /usr/lib/gimp/2.0/plug-ins/plugin-browser.exe
-  /usr/lib/gimp/2.0/plug-ins/png.exe
-  /usr/lib/gimp/2.0/plug-ins/pnm.exe
-  /usr/lib/gimp/2.0/plug-ins/polar.exe
-  /usr/lib/gimp/2.0/plug-ins/poppler.exe
-  /usr/lib/gimp/2.0/plug-ins/postscript.exe
+  /usr/lib/gimp/2.0/plug-ins/polar-coords.exe
   /usr/lib/gimp/2.0/plug-ins/print.exe
   /usr/lib/gimp/2.0/plug-ins/procedure-browser.exe
-  /usr/lib/gimp/2.0/plug-ins/psd-load.exe
-  /usr/lib/gimp/2.0/plug-ins/psd-save.exe
-  /usr/lib/gimp/2.0/plug-ins/psp.exe
-  /usr/lib/gimp/2.0/plug-ins/randomize.exe
-  /usr/lib/gimp/2.0/plug-ins/raw.exe
-  /usr/lib/gimp/2.0/plug-ins/rcm.exe
-  /usr/lib/gimp/2.0/plug-ins/redeye.exe
-  /usr/lib/gimp/2.0/plug-ins/retinex.exe
+  /usr/lib/gimp/2.0/plug-ins/qbist.exe
+  /usr/lib/gimp/2.0/plug-ins/red-eye-removal.exe
   /usr/lib/gimp/2.0/plug-ins/ripple.exe
   /usr/lib/gimp/2.0/plug-ins/rotate.exe
-  /usr/lib/gimp/2.0/plug-ins/sample_colorize.exe
-  /usr/lib/gimp/2.0/plug-ins/scatter_hsv.exe
+  /usr/lib/gimp/2.0/plug-ins/sample-colorize.exe
   /usr/lib/gimp/2.0/plug-ins/screenshot.exe
   /usr/lib/gimp/2.0/plug-ins/script-fu.exe
-  /usr/lib/gimp/2.0/plug-ins/sel2path.exe
-  /usr/lib/gimp/2.0/plug-ins/sel_gauss.exe
-  /usr/lib/gimp/2.0/plug-ins/semiflatten.exe
-  /usr/lib/gimp/2.0/plug-ins/sgi.exe
+  /usr/lib/gimp/2.0/plug-ins/selection-to-path.exe
+  /usr/lib/gimp/2.0/plug-ins/semi-flatten.exe
   /usr/lib/gimp/2.0/plug-ins/sharpen.exe
   /usr/lib/gimp/2.0/plug-ins/shift.exe
   /usr/lib/gimp/2.0/plug-ins/sinus.exe
-  /usr/lib/gimp/2.0/plug-ins/smooth_palette.exe
-  /usr/lib/gimp/2.0/plug-ins/snoise.exe
-  /usr/lib/gimp/2.0/plug-ins/sobel.exe
+  /usr/lib/gimp/2.0/plug-ins/smooth-palette.exe
   /usr/lib/gimp/2.0/plug-ins/softglow.exe
   /usr/lib/gimp/2.0/plug-ins/sparkle.exe
-  /usr/lib/gimp/2.0/plug-ins/spheredesigner.exe
-  /usr/lib/gimp/2.0/plug-ins/spread.exe
-  /usr/lib/gimp/2.0/plug-ins/struc.exe
-  /usr/lib/gimp/2.0/plug-ins/sunras.exe
-  /usr/lib/gimp/2.0/plug-ins/svg.exe
-  /usr/lib/gimp/2.0/plug-ins/tga.exe
-  /usr/lib/gimp/2.0/plug-ins/threshold_alpha.exe
-  /usr/lib/gimp/2.0/plug-ins/tiff-load.exe
-  /usr/lib/gimp/2.0/plug-ins/tiff-save.exe
+  /usr/lib/gimp/2.0/plug-ins/sphere-designer.exe
+  /usr/lib/gimp/2.0/plug-ins/threshold-alpha.exe
+  /usr/lib/gimp/2.0/plug-ins/tile-glass.exe
+  /usr/lib/gimp/2.0/plug-ins/tile-paper.exe
+  /usr/lib/gimp/2.0/plug-ins/tile-seamless.exe
+  /usr/lib/gimp/2.0/plug-ins/tile-small.exe
   /usr/lib/gimp/2.0/plug-ins/tile.exe
-  /usr/lib/gimp/2.0/plug-ins/tileit.exe
-  /usr/lib/gimp/2.0/plug-ins/tiler.exe
-  /usr/lib/gimp/2.0/plug-ins/uniteditor.exe
-  /usr/lib/gimp/2.0/plug-ins/unsharp.exe
-  /usr/lib/gimp/2.0/plug-ins/uri.exe
+  /usr/lib/gimp/2.0/plug-ins/unit-editor.exe
+  /usr/lib/gimp/2.0/plug-ins/unsharp-mask.exe
+  /usr/lib/gimp/2.0/plug-ins/value-invert.exe
+  /usr/lib/gimp/2.0/plug-ins/value-propagate.exe
+  /usr/lib/gimp/2.0/plug-ins/van-gogh-lic.exe
   /usr/lib/gimp/2.0/plug-ins/video.exe
-  /usr/lib/gimp/2.0/plug-ins/vinvert.exe
-  /usr/lib/gimp/2.0/plug-ins/vpropagate.exe
   /usr/lib/gimp/2.0/plug-ins/warp.exe
   /usr/lib/gimp/2.0/plug-ins/waves.exe
-  /usr/lib/gimp/2.0/plug-ins/webbrowser.exe
-  /usr/lib/gimp/2.0/plug-ins/whirlpinch.exe
+  /usr/lib/gimp/2.0/plug-ins/web-browser.exe
+  /usr/lib/gimp/2.0/plug-ins/whirl-pinch.exe
   /usr/lib/gimp/2.0/plug-ins/wind.exe
-  /usr/lib/gimp/2.0/plug-ins/winicon.exe
-  /usr/lib/gimp/2.0/plug-ins/wmf.exe
-  /usr/lib/gimp/2.0/plug-ins/xbm.exe
-  /usr/lib/gimp/2.0/plug-ins/xjt.exe
-  /usr/lib/gimp/2.0/plug-ins/xpm.exe
-  /usr/lib/gimp/2.0/plug-ins/xwd.exe
-  /usr/lib/gimp/2.0/plug-ins/zealouscrop.exe
-  /usr/share/application-registry/gimp.applications
   /usr/share/applications/gimp.desktop
-  /usr/share/doc/gimp2-2.4.7/AUTHORS
-  /usr/share/doc/gimp2-2.4.7/COPYING
-  /usr/share/doc/gimp2-2.4.7/ChangeLog
-  /usr/share/doc/gimp2-2.4.7/HACKING
-  /usr/share/doc/gimp2-2.4.7/INSTALL
-  /usr/share/doc/gimp2-2.4.7/LICENSE
-  /usr/share/doc/gimp2-2.4.7/NEWS
-  /usr/share/doc/gimp2-2.4.7/README
-  /usr/share/doc/gimp2-2.4.7/README.i18n
+  /usr/share/doc/gimp2/AUTHORS
+  /usr/share/doc/gimp2/COPYING
+  /usr/share/doc/gimp2/ChangeLog
+  /usr/share/doc/gimp2/HACKING
+  /usr/share/doc/gimp2/LICENSE
+  /usr/share/doc/gimp2/NEWS
+  /usr/share/doc/gimp2/README
+  /usr/share/doc/gimp2/README.i18n
   /usr/share/gimp/2.0/brushes/10x10square.gbr
   /usr/share/gimp/2.0/brushes/10x10squareBlur.gbr
   /usr/share/gimp/2.0/brushes/20x20square.gbr
@@ -594,6 +588,7 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/gradients/Yellow_Orange.ggr
   /usr/share/gimp/2.0/images/gimp-logo.png
   /usr/share/gimp/2.0/images/gimp-splash.png
+  /usr/share/gimp/2.0/images/wilber.png
   /usr/share/gimp/2.0/menus/brush-editor-menu.xml
   /usr/share/gimp/2.0/menus/brushes-menu.xml
   /usr/share/gimp/2.0/menus/buffers-menu.xml
@@ -618,7 +613,6 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/menus/templates-menu.xml
   /usr/share/gimp/2.0/menus/text-editor-toolbar.xml
   /usr/share/gimp/2.0/menus/tool-options-menu.xml
-  /usr/share/gimp/2.0/menus/toolbox-menu.xml
   /usr/share/gimp/2.0/menus/tools-menu.xml
   /usr/share/gimp/2.0/menus/undo-menu.xml
   /usr/share/gimp/2.0/menus/vectors-menu.xml
@@ -791,6 +785,7 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/scripts/paste-as-brush.scm
   /usr/share/gimp/2.0/scripts/paste-as-pattern.scm
   /usr/share/gimp/2.0/scripts/perspective-shadow.scm
+  /usr/share/gimp/2.0/scripts/plug-in-compat.init
   /usr/share/gimp/2.0/scripts/predator.scm
   /usr/share/gimp/2.0/scripts/pupi-button.scm
   /usr/share/gimp/2.0/scripts/rendermap.scm
@@ -808,10 +803,8 @@ Files included in the binary packages:
   /usr/share/gimp/2.0/scripts/slide.scm
   /usr/share/gimp/2.0/scripts/sota-chrome-logo.scm
   /usr/share/gimp/2.0/scripts/speed-text.scm
-  /usr/share/gimp/2.0/scripts/sphere.scm
   /usr/share/gimp/2.0/scripts/spinning-globe.scm
   /usr/share/gimp/2.0/scripts/spyrogimp.scm
-  /usr/share/gimp/2.0/scripts/starburst-logo.scm
   /usr/share/gimp/2.0/scripts/starscape-logo.scm
   /usr/share/gimp/2.0/scripts/swirltile.scm
   /usr/share/gimp/2.0/scripts/swirly-pattern.scm
@@ -900,11 +893,20 @@ Files included in the binary packages:
   /usr/share/icons/hicolor/48x48/apps/gimp.png
   /usr/share/icons/hicolor/64x64/apps/gimp.png
   /usr/share/icons/hicolor/scalable/apps/gimp.svg
+  /usr/share/locale/am/LC_MESSAGES/gimp20.mo
   /usr/share/locale/ar/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/ar/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/ar/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/ar/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/ar/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/az/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/az/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/az/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20-std-plug-ins.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20-tips.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20.mo
   /usr/share/locale/bg/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/bg/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/bg/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -915,6 +917,11 @@ Files included in the binary packages:
   /usr/share/locale/ca/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/ca/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/ca/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20-std-plug-ins.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20-tips.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20.mo
   /usr/share/locale/cs/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/cs/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/cs/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -938,7 +945,6 @@ Files included in the binary packages:
   /usr/share/locale/el/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/el/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/el/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/el/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/el/LC_MESSAGES/gimp20.mo
   /usr/share/locale/en_CA/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/en_CA/LC_MESSAGES/gimp20-script-fu.mo
@@ -952,7 +958,6 @@ Files included in the binary packages:
   /usr/share/locale/en_GB/LC_MESSAGES/gimp20.mo
   /usr/share/locale/eo/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/eo/LC_MESSAGES/gimp20-script-fu.mo
-  /usr/share/locale/eo/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/eo/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/eo/LC_MESSAGES/gimp20.mo
   /usr/share/locale/es/LC_MESSAGES/gimp20-libgimp.mo
@@ -988,7 +993,6 @@ Files included in the binary packages:
   /usr/share/locale/ga/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/ga/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/ga/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/ga/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/ga/LC_MESSAGES/gimp20.mo
   /usr/share/locale/gl/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/gl/LC_MESSAGES/gimp20-script-fu.mo
@@ -1005,6 +1009,7 @@ Files included in the binary packages:
   /usr/share/locale/he/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/he/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/he/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/hi/LC_MESSAGES/gimp20.mo
   /usr/share/locale/hr/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/hr/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/hr/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1018,8 +1023,12 @@ Files included in the binary packages:
   /usr/share/locale/id/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/id/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/id/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/id/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/id/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20-std-plug-ins.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20-tips.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20.mo
   /usr/share/locale/it/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/it/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/it/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1030,6 +1039,7 @@ Files included in the binary packages:
   /usr/share/locale/ja/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/ja/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/ja/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/ka/LC_MESSAGES/gimp20.mo
   /usr/share/locale/km/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/km/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/km/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1045,11 +1055,14 @@ Files included in the binary packages:
   /usr/share/locale/lt/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/lt/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/lt/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/lv/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/lv/LC_MESSAGES/gimp20.mo
   /usr/share/locale/mk/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/mk/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/mk/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/mk/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/mk/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/ml/LC_MESSAGES/gimp20.mo
   /usr/share/locale/ms/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/ms/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/ms/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -1070,10 +1083,14 @@ Files included in the binary packages:
   /usr/share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/nl/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/nl/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20-std-plug-ins.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20-tips.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20.mo
   /usr/share/locale/oc/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/oc/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/oc/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/oc/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/oc/LC_MESSAGES/gimp20.mo
   /usr/share/locale/pa/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/pa/LC_MESSAGES/gimp20-script-fu.mo
@@ -1125,25 +1142,22 @@ Files included in the binary packages:
   /usr/share/locale/sr/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/sr/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/sr/LC_MESSAGES/gimp20.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20-libgimp.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20-script-fu.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20-tips.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20-libgimp.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20-script-fu.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20-std-plug-ins.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20-tips.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/ta/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/th/LC_MESSAGES/gimp20.mo
   /usr/share/locale/tr/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/tr/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/tr/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/tr/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/tr/LC_MESSAGES/gimp20.mo
-  /usr/share/locale/tt/LC_MESSAGES/gimp20-libgimp.mo
-  /usr/share/locale/tt/LC_MESSAGES/gimp20-script-fu.mo
-  /usr/share/locale/tt/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/tt/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/tt/LC_MESSAGES/gimp20.mo
   /usr/share/locale/uk/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/uk/LC_MESSAGES/gimp20-script-fu.mo
@@ -1158,45 +1172,43 @@ Files included in the binary packages:
   /usr/share/locale/xh/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/xh/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/xh/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/xh/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/xh/LC_MESSAGES/gimp20.mo
   /usr/share/locale/yi/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/yi/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/yi/LC_MESSAGES/gimp20-std-plug-ins.mo
-  /usr/share/locale/yi/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/yi/LC_MESSAGES/gimp20.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20.mo
+  /usr/share/locale/zh_HK/LC_MESSAGES/gimp20.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20-libgimp.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20-script-fu.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20-std-plug-ins.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20.mo
-  /usr/share/man/man1/gimp-2.4.1.gz
-  /usr/share/man/man1/gimp-console-2.4.1
-  /usr/share/man/man1/gimp-console.1
-  /usr/share/man/man1/gimp-remote-2.4.1.gz
-  /usr/share/man/man1/gimp-remote.1
-  /usr/share/man/man1/gimp.1
-  /usr/share/man/man5/gimprc-2.4.5.gz
-  /usr/share/man/man5/gimprc.5
-  /usr/share/mime-info/gimp.keys
+  /usr/share/man/man1/gimp-2.6.1.gz
+  /usr/share/man/man1/gimp-console-2.6.1.gz
+  /usr/share/man/man1/gimp-console.1.gz
+  /usr/share/man/man1/gimp.1.gz
+  /usr/share/man/man5/gimprc-2.6.5.gz
+  /usr/share/man/man5/gimprc.5.gz
 
 (gimp2-python)
   /usr/lib/gimp/2.0/environ/pygimp.env
   /usr/lib/gimp/2.0/interpreters/pygimp.interp
   /usr/lib/gimp/2.0/plug-ins/colorxhtml.py
   /usr/lib/gimp/2.0/plug-ins/foggify.py
-  /usr/lib/gimp/2.0/plug-ins/gimpcons.py
-  /usr/lib/gimp/2.0/plug-ins/happy-valley-relief.py
   /usr/lib/gimp/2.0/plug-ins/palette-offset.py
   /usr/lib/gimp/2.0/plug-ins/palette-sort.py
   /usr/lib/gimp/2.0/plug-ins/palette-to-gradient.py
   /usr/lib/gimp/2.0/plug-ins/py-slice.py
   /usr/lib/gimp/2.0/plug-ins/pyconsole.py
+  /usr/lib/gimp/2.0/plug-ins/pyconsole.pyc
+  /usr/lib/gimp/2.0/plug-ins/pyconsole.pyo
+  /usr/lib/gimp/2.0/plug-ins/python-console.py
+  /usr/lib/gimp/2.0/plug-ins/python-eval.py
   /usr/lib/gimp/2.0/python/_gimpenums.dll
   /usr/lib/gimp/2.0/python/_gimpenums.la
   /usr/lib/gimp/2.0/python/_gimpui.dll
@@ -1224,8 +1236,11 @@ Files included in the binary packages:
   /usr/lib/gimp/2.0/python/gimpui.pyo
   /usr/lib/gimp/2.0/python/pygimp-logo.png
   /usr/share/locale/ar/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/az/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/be/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/bg/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/ca/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/ca@valencia/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/cs/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/da/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/de/LC_MESSAGES/gimp20-python.mo
@@ -1243,10 +1258,9 @@ Files included in the binary packages:
   /usr/share/locale/ga/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/gl/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/gu/LC_MESSAGES/gimp20-python.mo
-  /usr/share/locale/he/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/hr/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/hu/LC_MESSAGES/gimp20-python.mo
-  /usr/share/locale/id/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/is/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/it/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/ja/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/km/LC_MESSAGES/gimp20-python.mo
@@ -1257,6 +1271,7 @@ Files included in the binary packages:
   /usr/share/locale/nb/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/ne/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/nl/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/nn/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/oc/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/pa/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/pl/LC_MESSAGES/gimp20-python.mo
@@ -1268,19 +1283,17 @@ Files included in the binary packages:
   /usr/share/locale/sk/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/sl/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/sr/LC_MESSAGES/gimp20-python.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gimp20-python.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/sv/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/tr/LC_MESSAGES/gimp20-python.mo
-  /usr/share/locale/tt/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/uk/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/vi/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/xh/LC_MESSAGES/gimp20-python.mo
-  /usr/share/locale/yi/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/gimp20-python.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/gimp20-python.mo
 
 (gimp2-devel)
-  /usr/bin/gimptool-2.0
+  /usr/bin/gimptool-2.0.exe
   /usr/include/gimp-2.0/libgimp/gimp.h
   /usr/include/gimp-2.0/libgimp/gimp_pdb.h
   /usr/include/gimp-2.0/libgimp/gimpaspectpreview.h
@@ -1369,6 +1382,7 @@ Files included in the binary packages:
   /usr/include/gimp-2.0/libgimp/gimpselection.h
   /usr/include/gimp-2.0/libgimp/gimpselection_pdb.h
   /usr/include/gimp-2.0/libgimp/gimpselectiontools_pdb.h
+  /usr/include/gimp-2.0/libgimp/gimptextlayer_pdb.h
   /usr/include/gimp-2.0/libgimp/gimptexttool_pdb.h
   /usr/include/gimp-2.0/libgimp/gimptile.h
   /usr/include/gimp-2.0/libgimp/gimptransformtools_pdb.h
@@ -1435,6 +1449,7 @@ Files included in the binary packages:
   /usr/include/gimp-2.0/libgimpthumb/gimpthumbnail.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpbrowser.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpbutton.h
+  /usr/include/gimp-2.0/libgimpwidgets/gimpcairo-utils.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpcellrenderercolor.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpcellrenderertoggle.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpchainbutton.h
@@ -1475,6 +1490,8 @@ Files included in the binary packages:
   /usr/include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
   /usr/include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpquerybox.h
+  /usr/include/gimp-2.0/libgimpwidgets/gimpruler.h
+  /usr/include/gimp-2.0/libgimpwidgets/gimpscaleentry.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
   /usr/include/gimp-2.0/libgimpwidgets/gimpstock.h
@@ -1576,6 +1593,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimp/libgimp-gimpprogress.html
   /usr/share/gtk-doc/html/libgimp/libgimp-gimpregioniterator.html
   /usr/share/gtk-doc/html/libgimp/libgimp-gimpselection.html
+  /usr/share/gtk-doc/html/libgimp/libgimp-gimptextlayer.html
   /usr/share/gtk-doc/html/libgimp/libgimp-gimptexttool.html
   /usr/share/gtk-doc/html/libgimp/libgimp-gimptile.html
   /usr/share/gtk-doc/html/libgimp/libgimp-gimptools.html
@@ -1586,6 +1604,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimp/libgimp-index-deprecated.html
   /usr/share/gtk-doc/html/libgimp/libgimp-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimp/libgimp-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimp/libgimp-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimp/libgimp-index.html
   /usr/share/gtk-doc/html/libgimp/libgimp-selectors.html
   /usr/share/gtk-doc/html/libgimp/libgimp.devhelp
@@ -1619,6 +1638,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpbase/libgimpbase-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase-index.html
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase.devhelp
   /usr/share/gtk-doc/html/libgimpbase/libgimpbase.devhelp2
@@ -1640,6 +1660,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor-index.html
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor.devhelp
   /usr/share/gtk-doc/html/libgimpcolor/libgimpcolor.devhelp2
@@ -1664,6 +1685,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig-hierarchy.html
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig-index.html
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig.devhelp
   /usr/share/gtk-doc/html/libgimpconfig/libgimpconfig.devhelp2
@@ -1682,6 +1704,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpmath/libgimpmath-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath-index.html
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath.devhelp
   /usr/share/gtk-doc/html/libgimpmath/libgimpmath.devhelp2
@@ -1698,6 +1721,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule-index.html
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule.devhelp
   /usr/share/gtk-doc/html/libgimpmodule/libgimpmodule.devhelp2
@@ -1716,6 +1740,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb-index.html
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb.devhelp
   /usr/share/gtk-doc/html/libgimpthumb/libgimpthumb.devhelp2
@@ -1759,6 +1784,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/GimpPixmap.html
   /usr/share/gtk-doc/html/libgimpwidgets/GimpPreview.html
   /usr/share/gtk-doc/html/libgimpwidgets/GimpPreviewArea.html
+  /usr/share/gtk-doc/html/libgimpwidgets/GimpRuler.html
   /usr/share/gtk-doc/html/libgimpwidgets/GimpScrolledPreview.html
   /usr/share/gtk-doc/html/libgimpwidgets/GimpSizeEntry.html
   /usr/share/gtk-doc/html/libgimpwidgets/GimpStringComboBox.html
@@ -1793,6 +1819,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/index.html
   /usr/share/gtk-doc/html/libgimpwidgets/index.sgml
   /usr/share/gtk-doc/html/libgimpwidgets/left.png
+  /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-GimpCairoUtils.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-GimpEnumWidgets.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-GimpHelpUI.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-GimpHintBox.html
@@ -1811,6 +1838,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-index-deprecated.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-index-new-in-2-2.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-index-new-in-2-4.html
+  /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-index-new-in-2-6.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-index.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-utils.html
   /usr/share/gtk-doc/html/libgimpwidgets/libgimpwidgets-widgets.html
@@ -1906,6 +1934,8 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/stock-floating-selection-32.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-floating-selection-48.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-frame-64.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-gegl-16.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-gegl-22.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-gradient-bilinear-16.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-gradient-conical-asymmetric-16.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-gradient-conical-symmetric-16.png
@@ -2112,6 +2142,10 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/stock-transparency-24.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-undo-history-16.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-undo-history-24.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-user-manual-16.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-user-manual-24.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-user-manual-32.png
+  /usr/share/gtk-doc/html/libgimpwidgets/stock-user-manual-64.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-vcenter-24.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-vchain-24.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-vchain-broken-24.png
@@ -2124,7 +2158,6 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgimpwidgets/stock-web-24.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-wilber-16.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-wilber-22.png
-  /usr/share/gtk-doc/html/libgimpwidgets/stock-wilber-48.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-wilber-64.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-wilber-eek-64.png
   /usr/share/gtk-doc/html/libgimpwidgets/stock-zoom-follow-window-12.png
@@ -2136,58 +2169,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 2.4.7-1 -----
-Version bump.
-
------ version 2.4.6-1 -----
-Version bump.
-
------ version 2.4.5-1 -----
-Version bump.
-
------ version 2.4.4-1 -----
-Version bump.
-
------ version 2.4.3-1 -----
-Version bump for GNOME 2.20.
-
------ version 2.2.17-1 -----
-Version bump.
-
------ version 2.2.16-1 -----
-Version bump.
-
------ version 2.2.15-1 -----
-Version bump; built for python-2.5.
-
------ version 2.2.14-2 -----
-Fixed gimptool-2.0 --datadir output.
-
------ version 2.2.14-1 -----
-Version bump.
-
------ version 2.2.13-1 -----
-Version bump.
-
------ version 2.2.12-1 -----
-Version bump.
-
------ version 2.2.11-1 -----
-Version bump.
-
------ version 2.2.10-1 -----
-Version bump.
-
------ version 2.2.9-1 -----
-Version bump.
-Fixed building of shared pygimp procbrowsermodule.
-
------ version 2.2.8-1 -----
-Update to gimp-2.2 with gtk+-2.6.
-The AA plugin is now included.
-
------ version 2.0.4-1 -----
-Initial release for Cygwin.
+----- version 2.6.6-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

@@ -1,0 +1,54 @@
+inherit python gnome2
+
+DESCRIPTION="GNU Image Manipulation Program"
+HOMEPAGE="http://www.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/v${PV_MAJ_MIN}/gimp-${PV}.tar.bz2"
+PATCH_URI="
+	2.6-doc-shooter.patch
+	2.6-python.patch
+	2.4-shm.patch
+	2.4-symbols.patch
+"
+
+SRC_DIR="gimp-${PV}"
+
+gimpdir=/usr/lib/gimp/2.0
+
+PKG_NAMES="${PN} ${PN}-devel ${PN}-python"
+PKG_HINTS="setup devel python"
+gimp2_CONTENTS="--exclude=python --exclude=*.py* --exclude=pygimp.*
+                --exclude=gimptool-* --exclude=aclocal
+                --exclude=gtk-doc --exclude=gimp20-python.mo
+                etc/ usr/bin/ usr/lib/gimp/ usr/share/"
+gimp2_devel_CONTENTS="usr/bin/gimptool-2.0.exe usr/include/ usr/lib/lib*
+                      usr/lib/pkgconfig/ usr/share/aclocal/ usr/share/gtk-doc/
+                      usr/share/man/man1/gimptool-*"
+gimp2_python_CONTENTS="${gimpdir#/}/environ/pygimp.env
+                       ${gimpdir#/}/interpreters/pygimp.interp
+                       ${gimpdir#/}/plug-ins/*.py* ${gimpdir#/}/python/
+                       usr/share/locale/*/*/gimp20-python.mo"
+
+DIFF_EXCLUDES="devel-docs"
+
+# webkit: help-browser crashes, use web browser instead
+CYGCONF_ARGS="
+		--enable-default-binary \
+		--enable-gimp-console \
+		--enable-mmx \
+		--enable-python \
+		--disable-static \
+		--with-sendmail=/usr/sbin/sendmail \
+		--with-shm=posix \
+		--without-alsa \
+		--without-hal \
+		--without-linux-input \
+		--without-webkit
+"
+
+src_install() {
+	cd ${B}
+	dodir /usr/share/{applications,application-registry,mime-info}
+	cyginstall
+
+	dodoc ${S}/README.i18n
+}
