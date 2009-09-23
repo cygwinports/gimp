@@ -30,7 +30,6 @@ gimp2_python_CONTENTS="${gimpdir#/}/environ/pygimp.env
 
 DIFF_EXCLUDES="devel-docs"
 
-# webkit: help-browser crashes, use web browser instead
 CYGCONF_ARGS="
 		--enable-default-binary \
 		--enable-gimp-console \
@@ -42,7 +41,6 @@ CYGCONF_ARGS="
 		--without-alsa \
 		--without-hal \
 		--without-linux-input \
-		--without-webkit
 "
 
 src_install() {
