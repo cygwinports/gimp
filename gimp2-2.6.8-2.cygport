@@ -8,6 +8,7 @@ PATCH_URI="
 	2.6-python.patch
 	2.4-shm.patch
 	2.4-symbols.patch
+	2.6-gtk-doc1.14.patch
 "
 
 SRC_DIR="gimp-${PV}"
