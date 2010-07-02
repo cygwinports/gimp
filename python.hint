@@ -1,7 +1,7 @@
 category: Graphics Gnome Python
-requires: gimp2 libgcc1 python python-gobject2 python-gtk2
+requires: gimp2 libgcc1 python python-gobject2.0 python-gtk2.0
 external-source: gimp2
-sdesc: "GNU Image Manipulation Program version 2 (Python modules and plug-ins)"
+sdesc: "GNU Image Manipulation Program (Python modules and plug-ins)"
 ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and
 manipulate images. It can load and save a variety of image formats and
 can be used to convert between formats.

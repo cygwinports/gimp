@@ -1,7 +1,7 @@
 category: Gnome Graphics
 requires: gimp2 libglib2.0-devel libgtk2.0-devel
 external-source: gimp2
-sdesc: "GNU Image Manipulation Program version 2 (development files)"
+sdesc: "GNU Image Manipulation Program (plugin development)"
 ldesc: "The GIMP is the GNU Image Manipulation Program. It is used to edit and
 manipulate images. It can load and save a variety of image formats and
 can be used to convert between formats.
