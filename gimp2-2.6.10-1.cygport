@@ -44,10 +44,4 @@ CYGCONF_ARGS="
 		--without-linux-input \
 "
 
-src_install() {
-	cd ${B}
-	dodir /usr/share/{applications,application-registry,mime-info}
-	cyginstall
-
-	dodoc ${S}/README.i18n
-}
+DOCS="README.i18n"
