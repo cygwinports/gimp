@@ -14,6 +14,8 @@ PATCH_URI="
 	fedora-patches/gimp-2.6.11-shell-dnd-quit-crash.patch
 	fedora-patches/gimp-2.6.11-startup-warning.patch
 	fedora-patches/gimp-2.6.11-gif-load.patch
+	fedora-patches/gimp-2.6.11-poppler-0.17.patch
+	fedora-patches/gimp-2.6.11-libpng.patch
 	2.6-doc-shooter.patch
 	2.6-python.patch
 	2.4-shm.patch
