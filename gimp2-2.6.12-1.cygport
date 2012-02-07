@@ -4,22 +4,9 @@ DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v${PV_MAJ_MIN}/gimp-${PV}.tar.bz2"
 PATCH_URI="
-	fedora-patches/gimp-2.6.2-xdg-open.patch
-	fedora-patches/gimp-2.6.6-minimize-dialogs.patch
-	fedora-patches/gimp-2.6.10-script-fu-ipv6.patch
-	fedora-patches/gimp-2.6.11-colorxhtml.patch
-	fedora-patches/gimp-2.6.11-pyslice.patch
-	fedora-patches/gimp-2.6.11-psp-overflow.patch
-	fedora-patches/gimp-2.6.11-CVE-2010-4540,4541,4542.patch
-	fedora-patches/gimp-2.6.11-shell-dnd-quit-crash.patch
-	fedora-patches/gimp-2.6.11-startup-warning.patch
-	fedora-patches/gimp-2.6.11-gif-load.patch
-	fedora-patches/gimp-2.6.11-poppler-0.17.patch
-	fedora-patches/gimp-2.6.11-libpng.patch
 	2.6-doc-shooter.patch
 	2.6-python.patch
-	2.4-shm.patch
-	2.6-symprefix.patch
+	2.6-cygwin.patch
 	2.6-gtk-doc1.14.patch
 "
 
@@ -57,3 +44,4 @@ CYGCONF_ARGS="
 "
 
 DOCS="README.i18n"
+KEEP_LA_FILES="none"
