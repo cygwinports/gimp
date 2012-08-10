@@ -1,5 +1,5 @@
---- origsrc/gimp-2.6.3/configure.in	2008-12-01 23:18:52.031250000 -0600
-+++ src/gimp-2.6.3/configure.in	2008-12-01 23:19:29.531250000 -0600
+--- origsrc/gimp-2.8.0/configure.ac
++++ src/gimp-2.8.0/configure.ac
 @@ -914,7 +914,7 @@
  if test "$gdk_target" = x11; then
  

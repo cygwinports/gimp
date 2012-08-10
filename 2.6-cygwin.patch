@@ -1,5 +1,5 @@
---- origsrc/gimp-2.6.11/configure.in
-+++ src/gimp-2.6.11/configure.in
+--- origsrc/gimp-2.8.0/configure.ac
++++ src/gimp-2.8.0/configure.ac
 @@ -727,7 +727,7 @@
  esac
  

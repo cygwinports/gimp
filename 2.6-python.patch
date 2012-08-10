@@ -1,5 +1,5 @@
---- origsrc/gimp-2.6.3/configure.in	2008-12-01 23:13:14.703125000 -0600
-+++ src/gimp-2.6.3/configure.in	2008-12-01 23:17:08.796875000 -0600
+--- origsrc/gimp-2.8.0/configure.ac
++++ src/gimp-2.8.0/configure.ac
 @@ -1646,15 +1646,22 @@
    # This might be able to be figured out from distutils, but it's
    # not documented so we won't rely on internal implementation
@@ -28,10 +28,13 @@
  
 --- origsrc/gimp-2.6.3/plug-ins/pygimp/Makefile.am	2008-11-20 16:43:45.000000000 -0600
 +++ src/gimp-2.6.3/plug-ins/pygimp/Makefile.am	2008-12-01 23:18:07.687500000 -0600
-@@ -13,9 +13,6 @@
+@@ -13,10 +13,9 @@
  
  if PLATFORM_WIN32
  no_undefined = -no-undefined
++endif
++if OS_WIN32
+ shrext       = -shrext .pyd
 -path_separator = ;
 -else
 -path_separator = :
