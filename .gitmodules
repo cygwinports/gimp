@@ -1,3 +1,0 @@
-[submodule "fedora-patches"]
-	path = fedora-patches
-	url = git://pkgs.fedoraproject.org/gimp.git
