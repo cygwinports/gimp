@@ -2,7 +2,7 @@ inherit python gnome2
 
 NAME="gimp"
 VERSION=2.8.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Graphics"
 SUMMARY="GNU Image Manipulation Program"
 DESCRIPTION="The GIMP is the GNU Image Manipulation Program. It is used to edit
@@ -51,4 +51,3 @@ CYGCONF_ARGS="
 "
 
 DOCS="README.i18n"
-KEEP_LA_FILES="none"
