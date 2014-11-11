@@ -1,7 +1,7 @@
 inherit python gnome2
 
 NAME="gimp"
-VERSION=2.8.10
+VERSION=2.8.14
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="GNU Image Manipulation Program"
@@ -11,7 +11,7 @@ be used to convert between formats.  GIMP can also be used as a paint program.
 In addition, GIMP has several scripting extension which allow for advanced non-
 interactive processing and creation of images."
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/v${VERSION%.*}/${NAME}-${VERSION}.tar.bz2"
+SRC_URI="http://download.gimp.org/pub/gimp/v${VERSION%.*}/${NAME}-${VERSION}.tar.bz2"
 PATCH_URI="
 	2.6-doc-shooter.patch
 	2.6-python.patch
