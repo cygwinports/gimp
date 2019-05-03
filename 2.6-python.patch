@@ -1,31 +1,22 @@
 --- origsrc/gimp-2.8.0/configure.ac
 +++ src/gimp-2.8.0/configure.ac
-@@ -1646,15 +1646,22 @@
+@@ -1646,12 +1646,15 @@
    # This might be able to be figured out from distutils, but it's
    # not documented so we won't rely on internal implementation
    PYLINK_LIBS=
 -  if test "x$platform_win32" = "xyes"; then
-+  case "$target_or_host" in
-+  *-*-cygwin*)
-+    PYBIN_PATH="$PYTHON"
-+    PYLINK_LIBS="-L${py_exec_prefix}/lib/python${PYTHON_VERSION}/config -lpython${PYTHON_VERSION}"
-+    ;;
-+  *-*-mingw*)
++  if test "x$os_win32" = "xyes"; then
      PYBIN_PATH="$py_exec_prefix\pythonw.exe"
      PYTHON_INCLUDES=`echo "$PYTHON_INCLUDES" | sed -e 's/\\\\/\\//g'`
      py_exec_prefix=`echo "$py_exec_prefix" | sed -e 's/\\\\/\\//g'`
      pylibversion=`echo $PYTHON_VERSION | sed -e 's/\\.//'`
      PYLINK_LIBS="-L${py_exec_prefix}/libs -lpython${pylibversion}"
--  else
-+    ;;
-+  *)
++  elif test "x$platform_win32" = "xyes"; then
++    PYBIN_PATH="$PYTHON"
++    PYLINK_LIBS="-L${py_exec_prefix}/lib/python${PYTHON_VERSION}/config -lpython${PYTHON_VERSION}"
+   else
      PYBIN_PATH="$PYTHON"
--  fi
-+    ;;
-+  esac
-   AC_SUBST(PYLINK_LIBS)
-   AC_SUBST(PYBIN_PATH)
- 
+   fi
 --- origsrc/gimp-2.6.3/plug-ins/pygimp/Makefile.am	2008-11-20 16:43:45.000000000 -0600
 +++ src/gimp-2.6.3/plug-ins/pygimp/Makefile.am	2008-12-01 23:18:07.687500000 -0600
 @@ -13,10 +13,9 @@
@@ -50,14 +41,14 @@
  
  install-interp-file:
  	$(mkinstalldirs) '$(DESTDIR)$(pyinterpdir)'
---- origsrc/gimp-2.6.6/plug-ins/pygimp/plug-ins/Makefile.am	2008-11-20 16:43:45.000000000 -0600
-+++ src/gimp-2.6.6/plug-ins/pygimp/plug-ins/Makefile.am	2009-06-26 19:30:05.158198000 -0500
-@@ -21,6 +21,6 @@ test_scripts = \
+--- origsrc/gimp-2.10.10/plug-ins/pygimp/plug-ins/Makefile.am	2019-04-07 07:38:14.000000000 -0400
++++ src/gimp-2.10.10/plug-ins/pygimp/plug-ins/Makefile.am	2019-05-02 19:15:56.842702000 -0400
+@@ -55,7 +55,7 @@ endif
+ consoleexecdir = $(gimpplugindir)/plug-ins/python-console
+ console_scripts = python-console.py
+ consoleexec_SCRIPTS = $(console_scripts)
+-dist_consoleexec_DATA = pyconsole.py
++dist_consoleexec_PYTHON = pyconsole.py
  
- pluginexec_SCRIPTS = $(scripts)
- 
--pluginexec_DATA = pyconsole.py
-+pluginexec_PYTHON = pyconsole.py
- 
--EXTRA_DIST = $(pluginexec_DATA) $(scripts) $(test_scripts)
-+EXTRA_DIST = $(pluginexec_PYTHON) $(scripts) $(test_scripts)
+ EXTRA_DIST = \
+ 	$(source_scripts)	\

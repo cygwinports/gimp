@@ -1,7 +1,7 @@
-inherit python gnome2
+inherit python2 gnome2
 
 NAME="gimp"
-VERSION=2.8.22
+VERSION=2.10.10
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="GNU Image Manipulation Program"
@@ -15,16 +15,40 @@ SRC_URI="http://download.gimp.org/pub/gimp/v${VERSION%.*}/${NAME}-${VERSION}.tar
 PATCH_URI="
 	2.6-doc-shooter.patch
 	2.6-python.patch
-	2.6-cygwin.patch
+	2.10-cygwin.patch
 "
 
 gimpdir=/usr/lib/gimp/2.0
+for pyplug in colorxhtml file-openraster foggify gradients-save-as-css \
+	histogram-export palette-offset palette-sort palette-to-gradient \
+	py-slice python-console python-eval spyro_plus;
+do
+	python_plugins+=" ${gimpdir#/}/plug-ins/$pyplug/"
+	python_excludes+=" --exclude=$pyplug"
+done
 
 PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc ${NAME}-python"
-gimp_CONTENTS="--exclude=python --exclude=*.py* --exclude=pygimp.*
-                --exclude=gimptool-* --exclude=aclocal
-                --exclude=gtk-doc --exclude=gimp20-python.mo
-                etc/ usr/bin/ usr/lib/gimp/ usr/share/"
+gimp_REQUIRES="mypaint-brushes"
+gimp_CONTENTS="
+	--exclude=python --exclude=pygimp.*
+	${python_excludes}
+	--exclude=gimp20-python.mo
+	--exclude=gimptool-*
+	etc/gimp/
+	etc/postinstall/${NAME}.sh
+	usr/bin/cyggimp*.dll
+	usr/bin/gimp*
+	usr/libexec/gimp-debug-tool-2.0.exe
+	usr/lib/gimp/
+	usr/share/applications/gimp.desktop
+	usr/share/doc/${NAME}
+	usr/share/gimp/
+	usr/share/icons/hicolor/*/apps/gimp.*
+	usr/share/locale/*/*/gimp20*
+	usr/share/man/man1/gimp*
+	usr/share/man/man5/gimp*
+	usr/share/metainfo/*gimp*
+"
 gimp_devel_SUMMARY="${SUMMARY} (plugin development)"
 gimp_devel_CONTENTS="usr/bin/gimptool-2.0.exe usr/include/ usr/lib/lib*
                       usr/lib/pkgconfig/ usr/share/aclocal/
@@ -32,10 +56,13 @@ gimp_devel_CONTENTS="usr/bin/gimptool-2.0.exe usr/include/ usr/lib/lib*
 gimp_doc_SUMMARY="${SUMMARY} (API documentation)"
 gimp_doc_CONTENTS="usr/share/gtk-doc/"
 gimp_python_SUMMARY="${SUMMARY} (Python support and plugins)"
-gimp_python_CONTENTS="${gimpdir#/}/environ/pygimp.env
-                       ${gimpdir#/}/interpreters/pygimp.interp
-                       ${gimpdir#/}/plug-ins/*.py* ${gimpdir#/}/python/
-                       usr/share/locale/*/*/gimp20-python.mo"
+gimp_python_CONTENTS="
+	${gimpdir#/}/environ/pygimp.env
+	${gimpdir#/}/interpreters/pygimp.interp
+	${python_plugins}
+	${gimpdir#/}/python/
+	usr/share/locale/*/*/gimp20-python.mo
+"
 
 DIFF_EXCLUDES="devel-docs"
 
@@ -43,12 +70,17 @@ CYGCONF_ARGS="
 		--enable-default-binary \
 		--enable-gimp-console \
 		--enable-python \
-		--with-lcms=lcms2 \
+		--with-aa \
+		--with-libmng \
+		--with-libxpm \
 		--with-sendmail=/usr/sbin/sendmail \
 		--with-shm=posix \
+		--with-webkit \
+		--with-webp \
 		--without-alsa \
-		--without-hal \
+		--without-gudev \
 		--without-linux-input \
+		GEGL=/usr/bin/gegl-0.4
 "
 
 DOCS="README.i18n"

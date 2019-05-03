@@ -1,0 +1,183 @@
+--- origsrc/gimp-2.10.10/app/plug-in/gimpplugin.c	2018-08-19 12:47:18.000000000 -0400
++++ src/gimp-2.10.10/app/plug-in/gimpplugin.c	2019-05-02 21:48:55.896780500 -0400
+@@ -43,30 +43,28 @@
+ #include <gdk-pixbuf/gdk-pixbuf.h>
+ #include <gegl.h>
+ 
+-#if defined(G_OS_WIN32) || defined(G_WITH_CYGWIN)
++#if defined(G_OS_WIN32)
+ 
+ #define STRICT
+ #include <windows.h>
+ #include <process.h>
+ 
+-#ifdef G_OS_WIN32
+-#include <fcntl.h>
+-#include <io.h>
+-
+ #ifndef pipe
+ #define pipe(fds) _pipe(fds, 4096, _O_BINARY)
+ #endif
+ 
+ #endif
+ 
++#ifdef G_PLATFORM_WIN32
++#include <fcntl.h>
++#include <io.h>
++
+ #ifdef G_WITH_CYGWIN
+-#define O_TEXT    0x0100  /* text file   */
+-#define _O_TEXT   0x0100  /* text file   */
+-#define O_BINARY  0x0200  /* binary file */
+-#define _O_BINARY 0x0200  /* binary file */
++#define _O_TEXT   O_TEXT
++#define _O_BINARY O_BINARY
+ #endif
+ 
+-#endif /* G_OS_WIN32 || G_WITH_CYGWIN */
++#endif /* G_PLATFORM_WIN32 */
+ 
+ #include "libgimpbase/gimpbase.h"
+ #include "libgimpbase/gimpprotocol.h"
+--- origsrc/gimp-2.10.10/app/plug-in/gimppluginshm.c	2018-08-19 12:47:18.000000000 -0400
++++ src/gimp-2.10.10/app/plug-in/gimppluginshm.c	2019-05-02 19:11:28.008421700 -0400
+@@ -47,7 +47,7 @@
+ #include <gio/gio.h>
+ #include <gegl.h>
+ 
+-#if defined(G_OS_WIN32) || defined(G_WITH_CYGWIN)
++#if defined(G_OS_WIN32)
+ 
+ #define STRICT
+ #include <windows.h>
+@@ -60,7 +60,7 @@
+ 
+ #define USE_WIN32_SHM 1
+ 
+-#endif /* G_OS_WIN32 || G_WITH_CYGWIN */
++#endif /* G_OS_WIN32 */
+ 
+ #include "plug-in-types.h"
+ 
+--- origsrc/gimp-2.10.10/configure.ac	2019-05-02 22:07:36.357603500 -0400
++++ src/gimp-2.10.10/configure.ac	2019-05-02 21:25:31.275823000 -0400
+@@ -916,7 +916,7 @@ AC_ARG_ENABLE(win32-debug-console,
+               enable_win32_debug_console=auto)
+ 
+ AC_MSG_CHECKING([if GIMP should open a debug console at start])
+-if test "x$platform_win32" != "xyes"; then
++if test "x$os_win32" != "xyes"; then
+    enable_win32_debug_console=no
+ elif test "x$enable_win32_debug_console" != xno &&
+      test "x$enable_win32_debug_console" != xyes; then
+@@ -940,7 +940,7 @@ AC_ARG_WITH(win32-32bit-dll-folder,
+             with_win32_32bit_dll_folder="32/bin")
+ 
+ AC_MSG_CHECKING([the alternative folder containing 32-bit DLLs on Windows])
+-if test "x$platform_win32" = "xyes"; then
++if test "x$os_win32" = "xyes"; then
+   case "$host_cpu" in
+     x86_64)
+     ;;
+@@ -963,7 +963,7 @@ AC_MSG_RESULT([$with_win32_32bit_dll_fol
+ #####################
+ 
+ enable_drmingw="no"
+-if test "x$platform_win32" = "xyes"; then
++if test "x$os_win32" = "xyes"; then
+    # Check for Dr. Mingw
+    AC_CHECK_LIB(exchndl, ExcHndlSetLogFileNameA,
+                 [
+@@ -1256,7 +1256,7 @@ case $shmtype in
+ esac
+ 
+ 
+-if test "x$platform_win32" = "xyes"; then
++if test "x$os_win32" = "xyes"; then
+   shmtype=win32
+ elif test "x$shmtype" = "xsysv"; then
+   AC_CHECK_HEADER(sys/ipc.h,
+@@ -1340,7 +1340,7 @@ AC_MSG_RESULT($shmtype)
+ AC_MSG_CHECKING([whether symbols are prefixed])
+ 
+ case "$host_os" in
+-  mingw*)
++  mingw* | cygwin*)
+     case "$host_cpu" in 
+ 	  x86_64) SYMPREFIX='' ;;
+ 	  *) SYMPREFIX='_' ;;
+@@ -1487,7 +1487,7 @@ if test "x$enable_relocatable_bundle" !=
+   # the same prefix and can be relocated.
+   # On other platforms, build-time paths are meaningful.
+   if test "x$platform_osx" = "xyes" ||
+-     test "x$platform_win32" = "xyes"; then
++     test "x$os_win32" = "xyes"; then
+      enable_relocatable_bundle=yes
+   else
+      enable_relocatable_bundle=no
+@@ -1877,7 +1877,7 @@ if test "x$platform_linux" = xyes; then
+   else
+     detailed_backtraces='no (libbacktrace and libunwind are not found or not supported)'
+   fi
+-elif test "x$platform_win32" = xyes; then
++elif test "x$os_win32" = xyes; then
+   detailed_backtraces=$enable_drmingw
+ fi
+ 
+@@ -2387,13 +2387,13 @@ if test "x$enable_vector_icons" != "xno"
+   PKG_CHECK_MODULES(MIME_INFO, [shared-mime-info],
+                     have_shared_mime_info="yes", have_shared_mime_info="no")
+   if test "x$have_shared_mime_info" = "xyes" ||
+-     test "x$platform_win32" = "xyes"; then
++     test "x$os_win32" = "xyes"; then
+     # Check if librsvg was built with --disable-pixbuf-loader.
+     gdk_pixbuf_moduledir=`$PKG_CONFIG --variable=gdk_pixbuf_moduledir gdk-pixbuf-2.0`
+     # AC_CHECK_FILE macro does not work when cross-compiling and exits with:
+     # error: cannot check for file existence when cross compiling
+     # So let's test files the shell way.
+-    if (test "x$platform_win32" = "xyes" &&
++    if (test "x$os_win32" = "xyes" &&
+         test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.dll") ||
+        test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.so"; then
+       # We must not use $PKG_CONFIG nor PKG_CHECK_* macros because we need
+@@ -2404,7 +2404,7 @@ if test "x$enable_vector_icons" != "xno"
+         NATIVE_GLIB_CFLAGS=`pkg-config --cflags gio-2.0 glib-2.0`
+         enable_vector_icons="yes"
+ 
+-        if test "x$platform_win32" = "xyes"; then
++        if test "x$os_win32" = "xyes"; then
+           warning_vector_icons_windows="
+ WARNING: You enabled vector icons on Win32. Make sure to run:
+            $ gdk-pixbuf-query-loaders.exe --update-cache
+@@ -2517,7 +2517,7 @@ fi
+ # might mount the host system at a different root. This is for
+ # instance the case of flatpak which mount the host root at /run/host/.
+ if test "x$platform_osx" = "xno" &&
+-   test "x$platform_win32" = "xno"; then
++   test "x$os_win32" = "xno"; then
+   AC_MSG_CHECKING([default directory for color profiles])
+   AC_ARG_WITH(icc-directory,
+               [  --with-icc-directory    Path to default color profiles for this system],,
+--- origsrc/gimp-2.10.10/libgimp/gimp.c	2019-04-07 07:38:14.000000000 -0400
++++ src/gimp-2.10.10/libgimp/gimp.c	2019-05-02 19:11:35.071387100 -0400
+@@ -93,7 +93,7 @@
+ #include <Cocoa/Cocoa.h>
+ #endif
+ 
+-#if defined(G_OS_WIN32) || defined(G_WITH_CYGWIN)
++#if defined(G_OS_WIN32)
+ #  ifdef STRICT
+ #  undef STRICT
+ #  endif
+--- origsrc/gimp-2.10.10/libgimpbase/gimputils.c	2019-04-07 07:38:14.000000000 -0400
++++ src/gimp-2.10.10/libgimpbase/gimputils.c	2019-05-02 19:51:43.521601500 -0400
+@@ -50,7 +50,9 @@
+ 
+ /* For thread IDs. */
+ #include <sys/types.h>
++#ifdef __linux__
+ #include <sys/syscall.h>
++#endif
+ 
+ #ifdef HAVE_SYS_PRCTL_H
+ #include <sys/prctl.h>
